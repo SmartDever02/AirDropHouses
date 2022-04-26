@@ -1,6 +1,9 @@
 # ABOUT AIRDROPHOUSES (MULTILANGUAGE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is NFT minting site with browsing utilites.
+The author is James Jin, a full stack developer, who is very experienced with React, Typescript, TailwindCSS...
+To know more about him visit his portfolio site
+https://portfolio-jamesjin.netlify.app
 
 ## Available Scripts
 
