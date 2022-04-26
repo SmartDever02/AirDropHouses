@@ -1,0 +1,20 @@
+{
+  "mint_pre_sale": "NFT Pre-sales",
+  "mint_public_sale": "NFT Public Sales",
+  "mint_title": "Mint：TBA",
+  "mint_pre_sale_subtitle_batch_1": "First tier whitelist admissions only",
+  "mint_pre_sale_subtitle_batch_1_2": "First and second tier whitelist admissions only",
+  "mint_pre_sale_subtitle_batch_1_2_3": "Only available to all whitelist acceptors",
+  "mint_public_sale_subtitle": "Anyone can Mint",
+  "mint_title_sale_subtitle": "Please keep an eye on the official website or Discord for updates.",
+  "mint_price": "Mint Price",
+  "mint_amount": "Quantity",
+  "mint_total_price": "Mint Total Price",
+  "nft_left": "Nft left",
+  "nft_total": "Total",
+  "next_batch_whitelist_count_down": "Next Batch Whitelist Count down",
+  "next_batch_whitelist_count_down_desc": "A white list will be opened every 2 hours",
+  "next_mint_price_count_down": "Countdown of Minting amount adjustment",
+  "next_mint_price_count_down_desc": "Amount adjusted every 500 sheets or 6 hours",
+  "mint": "Mint"
+}

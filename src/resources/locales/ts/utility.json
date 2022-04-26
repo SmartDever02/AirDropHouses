@@ -1,0 +1,60 @@
+{
+  "utilities": "賦能",
+  "all": "全部",
+
+  "utilityType_label": "賦能類型",
+
+  "dedicated_service": "專人服務",
+  "dedicated_service_title": "富足家機構",
+  "dedicated_service_content": "富足家機構結合教育與房地產投資顧問、土地開發、危老都更合建、建設、裝潢等房地產一條龍學習實戰平台，為會員創造良善優質的房地產投資環境，專門協助會員個人理財至擁有房地產完成夢想，富足家機構已幫助許多會員達成輕鬆理財買屋夢想。",
+
+  "real_estate_discount": "購租服務",
+  "real_estate_discount_title_1": "購租服務",
+  "real_estate_discount_content_1": "秉持「誠信的態度、穩健的經營、精良的品質、熱誠的服務」四大理念，如同企業標誌「外圓內方」的經營精神，每一塊土地從開發到成形，皆經過長時間的布局與規劃，在以人為本、與自然共生的前提下，發掘各種建築的可能，不管蓋大蓋小，麗寶建設總是抱持董事長最初的信念，用心成就「看得喜歡買得起」、「讓回家成為一種享受!」的幸福目標。",
+  "real_estate_discount_title_2": "遠雄集團",
+  "real_estate_discount_content_2": "以家為核心 寫國際規格城市新貌 遠雄秉持「以家為核心，創造更有價值的居住環境」建築理念，蓋房子前先造環境，以大尺度的思惟進行整體規劃，並推動社區營造概念，強調「以人為本」的居住環境，帶動居民共同提升生活品質，凝聚居民向心力。",
+  "real_estate_discount_title_3": "豐邑機構",
+  "real_estate_discount_content_3": "豐邑建設一向強調團隊運作，憑著多年豐富經驗，從土地開發、產品規劃、執行銷售、承建營造、售後服務、交屋後社區管理及後勤協援團隊，每一環節都能群策群力緊密相扣，發揮最大功能，共同創作出最好的作品，嬴得客戶的讚許和推崇。 豐邑建設每一件作品，令人深刻理解到這份追求完美的決心。",
+  "real_estate_discount_title_4": "長虹建設",
+  "real_estate_discount_content_4": "秉持「以勤起家、以誠立業」精神，實踐「專注本業、用心建築」的信念穩健經營。從土地開發、規劃設計、建築營造到售後服務，長虹建設堅持以專業分工、完美品質 追求進步，熱忱創造以人為本、敬業奉獻的建築典範。在建築精緻化的時代演變中，長虹建設更著眼於創新動能，堅持 在傳承中成就新創，近年更不斷與國際知名建築團隊合作，完善和提升建築的人文風采及美學。",
+  "real_estate_discount_title_5": "HHEC香港商匯泓不動產",
+  "real_estate_discount_content_5": "香港商匯泓不動產是專注於房地產領域的專業服務企業和投資管理公司，公司在台灣的專業團隊，致力於提供全面整合的服務，為客戶持有、租用或投資房地產的決策實現增值。 香港商匯泓不動產業務遍及香港、台灣、上海、北京香港商匯泓不動產均以獨到見解、豐富經驗、專門知識及資源，協助客戶作出最明智的業務決定。",
+
+  "bank_service": "銀行服務",
+  "bank_service_title": "永豐銀行",
+  "bank_service_content": "永豐銀行以綿密的營業網路、高度創新的商品組合，為客戶提供最佳的金融服務，朝「以金融成就美好生活，提供客戶金融整體解決方案的靈活健康品牌」的願景前進，打造華人金融第一品牌。",
+
+  "airdrop_houses": "空投夢想家",
+  "airdrop_houses_title_1": "新北捷運宅",
+  "airdrop_houses_title_2": "Eastgalleryplace",
+  "airdrop_houses_title_3": "Menam Residences",
+
+  "airdrop_down_pay": "空投頭期款",
+  "airdrop_down_pay_title": "頭期款補助",
+
+  "other": "其他",
+  "other_title": "神秘黑卡俱樂部",
+  "other_content": "一個反映我們成員對他們想要的生活方式的願景而成立的私密平台。我們提供各國在地無 與倫比的環境，讓傑出的會員能定期的聚集在一起相互交流。當凝聚在一起時，他們會釋放出不凡和變革性 的想法，從而擴大他們的抱負並幫助繼續塑造我們周圍的世界。 神秘黑卡俱樂部是由全球思想家因為彼此共 有的求知慾還有他們對創造更美好環境的願景所吸引而聚集在此的一個資源共享平台。",
+
+  "coOper_label": "合作建商/機構",
+  "coOper_data_1": "富足家",
+  "coOper_data_2": "HHEC",
+  "coOper_data_3": "遠雄集團",
+  "coOper_data_4": "豐邑機構",
+  "coOper_data_5": "麗寶集團",
+
+  "down_pay_subsidy": "頭期款補助",
+  "airdrop_batch_1": "第一彈 #1",
+  "subsidy_amount": "補助金額",
+  "raffle_date": "開獎日期",
+  "raffle_host": "開獎人",
+  "raffle_winning_nft": "獲獎 NFT",
+  "raffle_live_url": "開獎連結",
+  "winning_wallet": "獲獎錢包地址",
+  "country": "國家",
+  "city": "城市",
+  "market_price": "市場售價",
+  "new_taipei": "新北",
+  "taiwan": "台灣",
+  "airdrop_houses_1_title": "新北捷運宅"
+}

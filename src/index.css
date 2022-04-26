@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Urbanist';
+  }
+  a {
+    @apply cursor-pointer;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa; /* or add it to the track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+}
+
+@layer components {
+  .logoTitle {
+    font-family: 'Dela Gothic One';
+  }
+  .RoomCarousel {
+    @apply relative;
+  }
+  .RoomCarousel .carousel-root .carousel:last-child {
+    @apply absolute bottom-[30px] left-0 w-full hidden md:block;
+  }
+  .RoomCarousel .carousel-root .carousel:last-child .thumbs-wrapper {
+    @apply w-full m-0;
+  }
+  .RoomCarousel .carousel-root .carousel:last-child .thumbs {
+    @apply w-full flex justify-center;
+  }
+  .RoomCarousel .carousel-root .carousel:last-child .thumb {
+    @apply mr-[15px] border-none p-[2px] rounded-[4px] !w-[93px];
+  }
+  .RoomCarousel .carousel-root .carousel:last-child .thumb.selected {
+    @apply mr-[15px] border-none p-[2px] bg-gradient-to-r from-[#F2974A] to-[#F4E077] rounded-[12px] !w-[93px];
+  }
+  .RoomCarousel .carousel-root .carousel:last-child .thumb:last-child {
+    @apply mr-0;
+  }
+  .partner-section .react-multi-carousel-list .react-multi-carousel-item {
+    @apply !w-fit mx-[20px] md:mx-[50px];
+  }
+
+  .AirDropCarousel .carousel .slider-wrapper {
+    @apply xl:w-[320px] 2xl:w-[368px];
+  }
+
+  .text-golden {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#F2974A] to-[#F4E077];
+  }
+  .footer-nav-item {
+    @apply cursor-pointer hover:text-golden;
+  }
+
+  .star-fall-section {
+    @apply fixed top-0 left-0 w-screen h-screen;
+    opacity: 0.5;
+    animation: animateBg 50s linear infinite;
+  }
+  @keyframes animateBg {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  .starfall {
+    @apply absolute top-1/2 left-1/2 w-1 h-1 bg-white rounded-full;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+      0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+    animation: animate 3s linear infinite;
+  }
+  .starfall::before {
+    @apply content-[''] absolute top-1/2 -translate-y-[50%] w-[150px] h-[1px];
+    background: linear-gradient(90deg, #fff, transparent);
+  }
+  @keyframes animate {
+    0% {
+      transform: rotate(335deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(325deg) translateX(-1500px);
+      opacity: 0;
+    }
+  }
+  .starfall:nth-child(1) {
+    @apply top-0 right-0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 7s;
+  }
+
+  .starfall:nth-child(2) {
+    @apply top-0 right-[80px];
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+  }
+
+  .starfall:nth-child(3) {
+    @apply top-[80px] right-0;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 4s;
+  }
+
+  .starfall:nth-child(4) {
+    @apply top-0 right-[180px];
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 4.9s;
+  }
+
+  .starfall:nth-child(5) {
+    @apply top-0 right-[400px];
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 5.5s;
+  }
+
+  .starfall:nth-child(6) {
+    @apply top-0 right-[600px] bg-red-400;
+    box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.1),
+      0 0 0 8px rgba(248, 113, 113, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+
+  .starfall:nth-child(6):before {
+    background: linear-gradient(90deg, #f87171, transparent);
+  }
+
+  .starfall:nth-child(7) {
+    @apply top-[300px] right-0;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 4.75s;
+  }
+
+  .starfall:nth-child(8) {
+    @apply top-0 right-[700px];
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 3.25s;
+  }
+
+  .starfall:nth-child(9) {
+    @apply top-0 right-[1000px];
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.85s;
+  }
+
+  .starfall:nth-child(10) {
+    @apply top-0 right-[1100px];
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
+  }
+}

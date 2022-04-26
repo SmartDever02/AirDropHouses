@@ -1,0 +1,148 @@
+{
+  "utilityType": {
+    "label": "utilityType_label",
+    "data": [
+      "dedicated_service",
+      "real_estate_discount",
+      "bank_service",
+      "airdrop_houses",
+      "airdrop_down_pay",
+      "other"
+    ]
+  },
+  "coOper": {
+    "label": "coOper_label",
+    "data": [
+      "coOper_data_1",
+      "coOper_data_2",
+      "coOper_data_3",
+      "coOper_data_4",
+      "coOper_data_5"
+    ]
+  },
+  "utilities": {
+    "dedicated_service": {
+      "type": "dedicated_service",
+      "image": "dedicated_service",
+      "partner": [{ "company": "", "link": "" }],
+      "data": [["dedicated_service_title", "dedicated_service_content"]]
+    },
+    "real_estate_discount": {
+      "type": "real_estate_discount",
+      "image": "real_estate_discount",
+      "partner": [
+        { "company": "", "link": "" },
+        { "company": "", "link": "" },
+        { "company": "", "link": "" },
+        { "company": "", "link": "" },
+        { "company": "HHEC", "link": "https://hhec.com" }
+      ],
+      "data": [
+        ["real_estate_discount_title_1", "real_estate_discount_content_1"],
+        ["real_estate_discount_title_2", "real_estate_discount_content_2"],
+        ["real_estate_discount_title_3", "real_estate_discount_content_3"],
+        ["real_estate_discount_title_4", "real_estate_discount_content_4"],
+        ["real_estate_discount_title_5", "real_estate_discount_content_5"]
+      ]
+    },
+    "bank_service": {
+      "type": "bank_service",
+      "image": "bank_service",
+      "data": [["bank_service_title", "bank_service_content"]]
+    },
+    "airdrop_houses": {
+      "type": "airdrop_houses",
+      "image": "airdrop_houses",
+      "public_string": "公開發售",
+      "private_string": "尚未公開",
+      "data": [
+        {
+          "title": "airdrop_houses_1_title",
+          "airdrop": "airdrop_batch_1",
+          "room_images": [
+            "airdrop_houses_01_01.png",
+            "airdrop_houses_01_02.png",
+            "airdrop_houses_01_03.png",
+            "airdrop_houses_01_04.png",
+            "airdrop_houses_01_05.png",
+            "airdrop_houses_01_06.png"
+          ],
+          "winning_wallet": "winning_wallet",
+          "wallet_address": "0x76691b78b43513875b3d2C0A68Edfdb14c8E7F37",
+          "public": true,
+          "date": "2020/04/11 12:00",
+          "values": [
+            {
+              "title": "country",
+              "content": "taiwan"
+            },
+            {
+              "title": "city",
+              "content": "new_taipei"
+            },
+            {
+              "title": "market_price",
+              "content": "1,3 M $NTD"
+            },
+            {
+              "title": "raffle_date",
+              "content": "TBA"
+            },
+            {
+              "title": "raffle_host",
+              "content": "徐乃麟"
+            },
+            {
+              "title": "raffle_winning_nft",
+              "content": "TBA"
+            },
+            {
+              "title": "raffle_live_url",
+              "content": "TBA"
+            }
+          ]
+        }
+      ]
+    },
+    "airdrop_down_pay": {
+      "type": "airdrop_down_pay",
+      "image": "airdrop_down_pay",
+      "data": [
+        {
+          "title": "down_pay_subsidy",
+          "airdrop": "airdrop_batch_1",
+          "winning_wallet": "winning_wallet",
+          "wallet_address": "0x76691b78b43513875b3d2C0A68Edfdb14c8E7F37",
+          "values": [
+            {
+              "title": "subsidy_amount",
+              "content": "TBA"
+            },
+            {
+              "title": "raffle_date",
+              "content": "TBA"
+            },
+            {
+              "title": "raffle_host",
+              "content": "徐乃麟"
+            },
+            {
+              "title": "raffle_winning_nft",
+              "content": "TBA"
+            },
+            {
+              "title": "raffle_live_url",
+              "content": "TBA"
+            }
+          ]
+        }
+      ]
+    },
+    "other": {
+      "type": "other",
+      "image": "other",
+      "partner": [{ "company": "AIRDROP", "link": "https://airdrop.com" }],
+      "data": [["other_title", "other_content"]]
+    }
+  }
+}
