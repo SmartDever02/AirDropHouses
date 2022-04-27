@@ -140,5 +140,44 @@
       "list_4": "phase_4_list_4"
     }
   },
-  "whitelists": ["mepunk", "", "", "", "", "", "", "", "", ""]
+  "whitelists": [
+    { "name": "mepunk", "link": "https://hislink.hislink" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" },
+    { "name": "", "link": "" }
+  ],
+
+  "partners": [
+    {
+      "name": "",
+      "img_url": "fzi_logo.png",
+      "link": "https://company_link.com"
+    },
+    {
+      "name": "",
+      "img_url": "fi_logo.png",
+      "link": "https://company_link.com"
+    },
+    {
+      "name": "",
+      "img_url": "fl_logo.png",
+      "link": "https://company_link.com"
+    },
+    {
+      "name": "",
+      "img_url": "lpg_logo.png",
+      "link": "https://company_link.com"
+    },
+    {
+      "name": "",
+      "img_url": "sph_logo.png",
+      "link": "https://company_link.com"
+    }
+  ]
 }

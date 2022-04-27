@@ -34,7 +34,7 @@ const UtilitySection = () => {
           disabled={isDisabled(filters.type)}
         />
       </div>
-      <CreateTags filters={filters} />
+      {/* <CreateTags filters={filters} /> */}
       <FilteredData />
 
       <div className='mt-[70px] mb-[50px] flex justify-center text-white font-bold text-[24px] leading-[26px] tracking-[18%]'>

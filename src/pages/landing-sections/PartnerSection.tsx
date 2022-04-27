@@ -14,6 +14,9 @@ import partner3 from '../../resources/images/landing/partners/fl_logo.png';
 import partner5 from '../../resources/images/landing/partners/lpg_logo.png';
 import partner6 from '../../resources/images/landing/partners/sph_logo.png';
 
+//import partner data from JSON
+import data from '../../data/structure/landing.json';
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -28,6 +31,22 @@ const responsive = {
 
 const PartnerSection = () => {
   const { t } = useTranslation(['landing']);
+  const partners = data.partners;
+
+  const renderPartners = () => {
+    return partners.map((partner, index) => {
+      return (
+        <Image
+          key={index}
+          src={require('../../resources/images/landing/partners/' +
+            partner.img_url)}
+          alt='comp'
+          className='h-[20px] md:h-[50px] max-w-fit cursor-pointer'
+          onClick={() => window.open(partner.link, '_blank')}
+        />
+      );
+    });
+  };
   return (
     <section className='partner-section pt-[50px] md:pt-[84px] xl:pt-[113px] text-center'>
       <div className='px-[15%] mb-[20px] md:mb-[50px]'>
@@ -42,58 +61,11 @@ const PartnerSection = () => {
         autoPlay
         infinite
         centerMode
+        pauseOnHover
         arrows={false}
       >
-        <Image
-          src={partner2}
-          alt='pt1'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner3}
-          alt='pt2'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner1}
-          alt='pt3'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner5}
-          alt='pt4'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner6}
-          alt='pt5'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner2}
-          alt='pt1'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner3}
-          alt='pt2'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner1}
-          alt='pt3'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner5}
-          alt='pt4'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
-        <Image
-          src={partner6}
-          alt='pt5'
-          className='h-[20px] md:h-[50px] max-w-fit'
-        />
+        {renderPartners()}
+        {renderPartners()}
       </Carousel>
       ;
     </section>

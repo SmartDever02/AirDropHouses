@@ -47,9 +47,14 @@ const WhitelistSection = () => {
               {t('partners_whitelist_description')}
             </p>
           </div>
-          <div className='w-full mt-[15px] md:mt-[20px] xl:mt-[30px] px-[10%] md:px-[5%] px-[10%] grid sm:grid-cols-1 md:grid-cols-5 gap-[8px] md:gap-x-[20px] md:gap-y-[14px] xl:gap-x-[30px] xl:gap-y-[21px]'>
+          <div className='w-full mt-[15px] md:mt-[20px] xl:mt-[30px] px-[10%] md:px-[5%] grid sm:grid-cols-1 md:grid-cols-5 gap-[8px] md:gap-x-[20px] md:gap-y-[14px] xl:gap-x-[30px] xl:gap-y-[21px]'>
             {whitelists.map((one, index) => (
-              <WhitelistItem key={index} index={index + 1} image={one} />
+              <WhitelistItem
+                key={index}
+                index={index + 1}
+                image={one.name}
+                link={one.link}
+              />
             ))}
           </div>
           <div className='mt-[16px] sm:mt-[20px] md:mt-[36px] xl:mt-[52px]'>

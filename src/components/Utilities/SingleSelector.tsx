@@ -92,7 +92,13 @@ const SingleSelector = (props: selectorType) => {
             : 'rounded-b-[6px]'
         }`}
       >
-        {props.label}
+        {props.filter === 'utilityType'
+          ? filters.type === ''
+            ? props.label
+            : t(filters.type)
+          : filters.coOper === ''
+          ? props.label
+          : t(filters.coOper)}
         <img
           src={dropImage}
           alt='^'

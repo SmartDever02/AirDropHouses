@@ -13,7 +13,12 @@ const WhitelistItem = (props: itemType) => {
       props.image +
       '.svg');
     return (
-      <div className='flex justify-center'>
+      <div
+        className={`h-[70px] sm:h-[82px] flex justify-center rounded-[12px] transition-all duration-300 ${
+          props.link ? 'cursor-pointer hover:bg-white hover:bg-opacity-20' : ''
+        }`}
+        onClick={() => props.link && window.open(props.link, '_blank')}
+      >
         <Img src={image} alt='*' loader={loader} />
       </div>
     );
@@ -25,6 +30,7 @@ const WhitelistItem = (props: itemType) => {
 interface itemType {
   index: number;
   image: string;
+  link: string;
 }
 
 export default WhitelistItem;
