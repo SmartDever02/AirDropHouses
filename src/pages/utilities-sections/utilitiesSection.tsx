@@ -36,10 +36,6 @@ const UtilitySection = () => {
       </div>
       {/* <CreateTags filters={filters} /> */}
       <FilteredData />
-
-      <div className='mt-[70px] mb-[50px] flex justify-center text-white font-bold text-[24px] leading-[26px] tracking-[18%]'>
-        {/* 第一頁 ←上一頁 1 2 3 4 5 6 7 下一頁→ 最終頁 */}
-      </div>
     </div>
   );
 };

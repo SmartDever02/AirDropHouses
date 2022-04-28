@@ -3,7 +3,7 @@ const isDisabled = (value: string) => {
     value !== 'other' &&
     value !== 'real_estate_discount' &&
     value !== 'dedicated_service' &&
-    value !== ''
+    value !== 'utilityType_label'
   );
 };
 

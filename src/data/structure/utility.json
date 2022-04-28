@@ -2,6 +2,7 @@
   "utilityType": {
     "label": "utilityType_label",
     "data": [
+      "utilityType_label",
       "dedicated_service",
       "real_estate_discount",
       "bank_service",
@@ -13,6 +14,7 @@
   "coOper": {
     "label": "coOper_label",
     "data": [
+      "coOper_label",
       "coOper_data_1",
       "coOper_data_2",
       "coOper_data_3",
@@ -24,7 +26,7 @@
     "dedicated_service": {
       "type": "dedicated_service",
       "image": "dedicated_service",
-      "partner": [{ "company": "", "link": "" }],
+      "partner": [{ "company": "dedicated_service_company", "link": "" }],
       "data": [["dedicated_service_title", "dedicated_service_content"]]
     },
     "real_estate_discount": {

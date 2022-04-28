@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const filterSlice = createSlice({
   name: 'filters',
   initialState: {
-    type: '',
-    coOper: '',
+    type: 'utilityType_label',
+    coOper: 'coOper_label',
     typeOpened: false,
   },
   reducers: {

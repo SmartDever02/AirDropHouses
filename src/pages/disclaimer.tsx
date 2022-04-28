@@ -1,11 +1,9 @@
-import Footer from '../components/Footer/Footer';
-import NewFooter from '../components/Footer/NewFooter';
-import Navbar from '../components/Navbar/Navbar';
 import GoldenText from '../components/Typhography/GoldenText';
+import DisclaimerLayout from '../layout/disclaimer';
 
 const Disclaimer = () => {
   return (
-    <div className='bg-[#14141F]'>
+    <DisclaimerLayout>
       <div className='lg:bg-[url("resources/images/disclaimer/disclaimerBack.png")] lg:bg-cover lg:bg-no-repeat w-screen mt-[78px] lg:mt-[80px] px-[35px] md:px-[80px] lg:px-[100px] xl:px-[150px] 2xl:px-[250px] pt-[30px] md:pt-[40px] lg:pt-[50px] xl:pt-[80px] 2xl:pt-[110px]'>
         <div className='text-[24px] leading-[34px] md:text-[28px] lg:text-[30px] xl:text-[36px] md:leading-[45px] lg:leading-[50px] xl:leading-[68px] font-bold pb-[10px] md:pb-[2px] lg:pb-[5px]'>
           <GoldenText>免責聲明</GoldenText>
@@ -51,9 +49,7 @@ const Disclaimer = () => {
           </p>
         </div>
       </div>
-      <Navbar />
-      <NewFooter />
-    </div>
+    </DisclaimerLayout>
   );
 };
 

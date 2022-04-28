@@ -27,6 +27,12 @@ const delays = [
   'transition-opacity duration-[400ms] delay-[1500ms]',
 ];
 
+const notFound = (
+  <div className='col-span-2 text-white text-[100px] md:text-[150px] font-semibold md:font-bold flex justify-center items-center'>
+    (˚Δ˚)b
+  </div>
+);
+
 const TransitionWrapper = (props: any) => {
   return (
     <Transition
@@ -41,53 +47,71 @@ const TransitionWrapper = (props: any) => {
   );
 };
 
-export const getAirDropHouses = (initDelay?: number) => {
+export const getAirDropHouses = (initDelay?: number, company?: string) => {
   return (
     <>
-      {utilities.airdrop_houses.data.map((data, index) => (
-        <TransitionWrapper
-          key={data.title}
-          index={initDelay ? index + initDelay : index}
-        >
-          <CARD_DETAIL
-            index={index + 1}
-            type={utilities.airdrop_houses.type}
-            data={data}
-          />
-        </TransitionWrapper>
-      ))}
+      {utilities.airdrop_houses.data.map(
+        (data, index) =>
+          company === 'coOper_label' && (
+            <TransitionWrapper
+              key={data.title}
+              index={initDelay ? index + initDelay : index}
+            >
+              <CARD_DETAIL
+                index={index + 1}
+                type={utilities.airdrop_houses.type}
+                data={data}
+              />
+            </TransitionWrapper>
+          )
+      )}
     </>
   );
 };
 
-export const getAirDropPay = (initDelay?: number) => {
+export const getAirDropPay = (initDelay?: number, company?: string) => {
   return (
     <>
-      {utilities.airdrop_down_pay.data.map((data, index) => (
-        <TransitionWrapper
-          key={data.title}
-          index={initDelay ? index + initDelay : index}
-        >
-          <CARD_DETAIL
-            index={index + 1}
-            type={utilities.airdrop_down_pay.type}
-            data={data}
-          />
-        </TransitionWrapper>
-      ))}
+      {utilities.airdrop_down_pay.data.map(
+        (data, index) =>
+          company === 'coOper_label' && (
+            <TransitionWrapper
+              key={data.title}
+              index={initDelay ? index + initDelay : index}
+            >
+              <CARD_DETAIL
+                index={index + 1}
+                type={utilities.airdrop_down_pay.type}
+                data={data}
+              />
+            </TransitionWrapper>
+          )
+      )}
     </>
   );
 };
 
-export const getRealEstateDiscount = (initDelay?: number, company?: string) => {
+export const getRealEstateDiscount = (
+  initDelay?: number,
+  type?: string,
+  company?: string
+) => {
   const red = utilities.real_estate_discount;
   const companies = red.partner;
+
+  const resultLength = red.data.filter(
+    (data, index) =>
+      company === undefined ||
+      company === 'coOper_label' ||
+      getCompanyName(company) === companies[index].company
+  ).length;
+
   return (
     <>
       {red.data.map(
         (data, index) =>
           (company === undefined ||
-            company === '' ||
+            company === 'coOper_label' ||
             getCompanyName(company) === companies[index].company) && (
             <TransitionWrapper
               key={index}
@@ -103,19 +127,30 @@ export const getRealEstateDiscount = (initDelay?: number, company?: string) => {
             </TransitionWrapper>
           )
       )}
+      {type === 'real_estate_discount' && resultLength === 0 && notFound}
     </>
   );
 };
 
-export const getDedicatedService = (initDelay?: number, company?: string) => {
+export const getDedicatedService = (
+  initDelay?: number,
+  type?: string,
+  company?: string
+) => {
   const ds = utilities.dedicated_service;
   const companies = ds.partner;
+  const resultLength = ds.data.filter(
+    (data, index) =>
+      company === undefined ||
+      company === 'coOper_label' ||
+      getCompanyName(company) === companies[index].company
+  ).length;
   return (
     <>
       {ds.data.map(
         (data, index) =>
           (company === undefined ||
-            company === '' ||
+            company === 'coOper_label' ||
             getCompanyName(company) === companies[index].company) && (
             <TransitionWrapper
               key={index}
@@ -131,6 +166,7 @@ export const getDedicatedService = (initDelay?: number, company?: string) => {
             </TransitionWrapper>
           )
       )}
+      {type === 'dedicated_service' && resultLength === 0 && notFound}
     </>
   );
 };

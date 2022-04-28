@@ -4,7 +4,7 @@ import i18next from 'i18next';
 import { Link } from 'react-router-dom';
 import config from '../../config/config';
 
-const NewFooter = () => {
+const NewFooter = (props: footerType) => {
   const currentLanguage = i18next.language;
   const { t } = useTranslation(['footer']);
 
@@ -16,10 +16,19 @@ const NewFooter = () => {
           <Link className='footer-nav-item w-1/4 md:w-auto' to='/'>
             <span>{t('whitepaper')}</span>
           </Link>
-          <Link className='footer-nav-item w-1/4 md:w-auto' to='/disclaimer'>
+          <Link
+            className={`footer-nav-item w-1/4 md:w-auto ${
+              props.page === 'disclaimer'
+                ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#F2974A] to-[#F4E077]'
+                : ''
+            }`}
+            to='/disclaimer'
+          >
             <span>{t('disclaimer')}</span>
           </Link>
-          <span>©2022 Airdrop Houses</span>
+          <div className='w-full md:w-auto text-center md:text-left'>
+            ©2022 Airdrop Houses
+          </div>
         </div>
         <div className='flex order-3 md:order-2 flex-row flex-wrap md:flex-col md:gap-[2px] text-[14px] leading-[26px] font-medium text-white border-b-[1px] border-b-slate-500 md:border-none'>
           <span className='text-[#8A8AA0] w-full md:w-auto'>
@@ -28,7 +37,7 @@ const NewFooter = () => {
           <a
             target='_blank'
             href={config.discord_url}
-            className='footer-nav-item w-1/4 md:w-auto'
+            className='footer-nav-item w-1/4 md:w-auto text-center md:text-left'
             rel='noreferrer'
           >
             <span>Discord</span>
@@ -36,7 +45,7 @@ const NewFooter = () => {
           <a
             target='_blank'
             href={config.instagram_url}
-            className='footer-nav-item w-1/4 md:w-auto'
+            className='footer-nav-item w-1/4 md:w-auto text-center md:text-left'
             rel='noreferrer'
           >
             <span>Instagram</span>
@@ -44,7 +53,7 @@ const NewFooter = () => {
           <a
             target='_blank'
             href={config.facebook_url}
-            className='footer-nav-item w-1/4 md:w-auto'
+            className='footer-nav-item w-1/4 md:w-auto text-center md:text-left'
             rel='noreferrer'
           >
             <span>Facebook</span>
@@ -52,7 +61,7 @@ const NewFooter = () => {
           <a
             target='_blank'
             href={config.twitter_url}
-            className='footer-nav-item w-1/4 md:w-auto'
+            className='footer-nav-item w-1/4 md:w-auto text-center md:text-leftr'
             rel='noreferrer'
           >
             <span>Twitter</span>
@@ -94,5 +103,9 @@ const NewFooter = () => {
     </footer>
   );
 };
+
+interface footerType {
+  page?: string;
+}
 
 export default NewFooter;
