@@ -2,7 +2,7 @@
   "utilities": "Utilities",
   "all": "All",
 
-  "utilityType_label": "Utility Types",
+  "utilityType_label": "All Utilities",
   "dedicated_service": "Dedicated Service",
   "real_estate_discount": "Real Estate Discounts",
   "bank_service": "Bank Service",
@@ -10,7 +10,7 @@
   "airdrop_down_pay": "Airdrop Down Pay",
   "other": "Other",
 
-  "coOper_label": "Partners",
+  "coOper_label": "All Enterprises",
   "coOper_data_1": "長虹集團",
   "coOper_data_2": "富足家",
   "coOper_data_3": "遠雄集團",

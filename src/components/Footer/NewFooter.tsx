@@ -61,7 +61,7 @@ const NewFooter = (props: footerType) => {
           <a
             target='_blank'
             href={config.twitter_url}
-            className='footer-nav-item w-1/4 md:w-auto text-center md:text-leftr'
+            className='footer-nav-item w-1/4 md:w-auto text-center md:text-left'
             rel='noreferrer'
           >
             <span>Twitter</span>

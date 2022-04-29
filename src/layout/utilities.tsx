@@ -11,6 +11,10 @@ const UtilityLayout = (props: any) => {
   useEffect(() => {
     blockScroll();
     allowScroll();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, []);
 
   return (

@@ -88,6 +88,7 @@
     "subtitle_2": "manual_subtitle_2",
     "description_2_1": "manual_description_2_1",
     "description_2_2": "manual_description_2_2",
+    "description_2_3": "manual_description_2_3",
     "subtitle_3": "manual_subtitle_3",
     "description_3_1": "manual_description_3_1",
     "description_3_2": "manual_description_3_2",
@@ -141,43 +142,56 @@
     }
   },
   "whitelists": [
-    { "name": "mepunk", "link": "https://hislink.hislink" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" },
-    { "name": "", "link": "" }
+    { "name": "mepunk", "link": "https://discord.gg/nGAPH62uEx" },
+    { "name": "crypto_pioneers_guild", "link": "https://discord.gg/qXX7skkR8X" },
+    { "name": "alpha_shark", "link": "" },
+    { "name": "alpacadabraz", "link": "" },
+    { "name": "alphakids", "link": "" },
+    { "name": "apclubnft", "link": "" },
+    { "name": "bitmen", "link": "" },
+    { "name": "cryptopaul", "link": "" },
+    { "name": "dating_ape", "link": "" },
+    { "name": "elysiumshell", "link": "" },
+    { "name": "phanta_bear", "link": "https://discord.gg/eexRE2uJqp" },
+    { "name": "valley22", "link": "" },
+    { "name": "richman_heroes", "link": "" }
   ],
 
   "partners": [
     {
-      "name": "",
+      "name": "富足家機構",
       "img_url": "fzi_logo.png",
-      "link": "https://company_link.com"
+      "link": "https://www.everrich.vip"
     },
     {
-      "name": "",
+      "name": "豐邑機構",
       "img_url": "fi_logo.png",
-      "link": "https://company_link.com"
+      "link": "http://www.fong-yi.com.tw"
     },
     {
-      "name": "",
+      "name": "遠雄建設",
       "img_url": "fl_logo.png",
-      "link": "https://company_link.com"
+      "link": "https://www.farglory-land.com.tw"
     },
     {
-      "name": "",
+      "name": "麗寶集團",
       "img_url": "lpg_logo.png",
-      "link": "https://company_link.com"
+      "link": "https://www.lihpao.com.tw"
     },
     {
-      "name": "",
+      "name": "永豐金控",
       "img_url": "sph_logo.png",
-      "link": "https://company_link.com"
+      "link": "https://bank.sinopac.com"
+    },
+    {
+      "name": "長虹建設",
+      "img_url": "ch_logo.png",
+      "link": "http://www.chonghong.com.tw"
+    },
+    {
+      "name": "HHEC",
+      "img_url": "hhec_logo.png",
+      "link": "http://www.hhec.com.tw"
     }
   ]
 }

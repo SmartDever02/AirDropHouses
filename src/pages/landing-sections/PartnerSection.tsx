@@ -7,13 +7,6 @@ import 'react-multi-carousel/lib/styles.css';
 import Content from '../../components/Typhography/Content';
 import Gradient from '../../components/Typhography/GradientTitle';
 
-//import partner logos
-import partner1 from '../../resources/images/landing/partners/fzi_logo.png';
-import partner2 from '../../resources/images/landing/partners/fi_logo.png';
-import partner3 from '../../resources/images/landing/partners/fl_logo.png';
-import partner5 from '../../resources/images/landing/partners/lpg_logo.png';
-import partner6 from '../../resources/images/landing/partners/sph_logo.png';
-
 //import partner data from JSON
 import data from '../../data/structure/landing.json';
 

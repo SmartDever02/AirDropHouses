@@ -70,7 +70,7 @@
             "airdrop_houses_01_06.png"
           ],
           "winning_wallet": "winning_wallet",
-          "wallet_address": "0x76691b78b43513875b3d2C0A68Edfdb14c8E7F37",
+          "wallet_address": "TBA",
           "public": true,
           "date": "2020/04/11 12:00",
           "values": [
@@ -114,7 +114,7 @@
           "title": "down_pay_subsidy",
           "airdrop": "airdrop_batch_1",
           "winning_wallet": "winning_wallet",
-          "wallet_address": "0x76691b78b43513875b3d2C0A68Edfdb14c8E7F37",
+          "wallet_address": "TBA",
           "values": [
             {
               "title": "subsidy_amount",

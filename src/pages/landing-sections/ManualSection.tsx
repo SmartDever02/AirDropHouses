@@ -27,7 +27,9 @@ const ManualSection = () => {
             <MTitle>【{t(data.manual.subtitle_2)}】</MTitle>
             {t(data.manual.description_2_1)}
             <br />
-            {/* {t(data.manual.description_2_2)} */}
+            {t(data.manual.description_2_2)}
+            <br />
+            {t(data.manual.description_2_3)}
           </div>
           <div className='mt-[12px] px-[12px] block md:flex flex-col items-center'>
             <MTitle>【{t(data.manual.subtitle_3)}】</MTitle>

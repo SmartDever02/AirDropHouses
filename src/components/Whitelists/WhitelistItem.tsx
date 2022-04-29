@@ -11,7 +11,7 @@ const WhitelistItem = (props: itemType) => {
   try {
     let image = require('../../resources/images/landing/whitelists/' +
       props.image +
-      '.svg');
+      '.png');
     return (
       <div
         className={`h-[70px] sm:h-[82px] flex justify-center rounded-[12px] transition-all duration-300 ${

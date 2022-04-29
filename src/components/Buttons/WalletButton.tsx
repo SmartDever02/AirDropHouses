@@ -1,7 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { useEtherBalance, useEthers } from '@usedapp/core';
 import Web3Modal from 'web3modal';
+import { ethers } from 'ethers';
+
 import { Transition } from '@headlessui/react';
 import { useState } from 'react';
+
 import walletIcon from '../../resources/images/landing/walletIcon.svg';
 import walletIconOver from '../../resources/images/landing/walletIconOver.svg';
 import closeIcon from '../../resources/images/landing/modal/closeIcon.svg';
@@ -9,32 +13,40 @@ import etherIcon from '../../resources/images/landing/modal/ethereum.svg';
 import metamaskIcon from '../../resources/images/landing/modal/metamask.svg';
 import coinbaseIcon from '../../resources/images/landing/modal/coinbase.svg';
 import walletConnection from '../../resources/images/landing/modal/walletConnection.svg';
-
-const providerOptions = {
-  /* See Provider Options Section */
-};
-
-const web3Modal = new Web3Modal({
-  network: 'mainnet', // optional
-  cacheProvider: true, // optional
-  providerOptions, // required
-});
-
-const connectWallet = async () => {
-  let provider = await web3Modal.connect();
-  provider.on('connect', (info: { chainId: number }) => {
-    console.log(info);
-  });
-};
+import { displayAddress } from '../../helpers/getShortenedAddress';
 
 const WalletButton = (props: buttonType) => {
   let [isOpen, setIsOpen] = useState(false);
+
   const { t } = useTranslation(['navbar']);
+  const { account, activate, deactivate, active } = useEthers();
+
+  const providerOptions = {
+    /* See Provider Options Section */
+  };
+  const web3Modal = new Web3Modal({
+    network: 'mainnet', // optional
+    cacheProvider: true, // optional
+    providerOptions, // required
+  });
+
+  const disconnectWallet = async () => {
+    await web3Modal.clearCachedProvider();
+    deactivate();
+    console.log('after deactive, active?:', active);
+  };
+
+  const connectWallet = async () => {
+    const provider = await web3Modal.connect();
+    const ethersProvider = new ethers.providers.Web3Provider(provider);
+    const ethersSigner = ethersProvider.getSigner();
+    activate(provider);
+  };
 
   return (
     <div className='flex items-center justify-center bg-gradient-to-r from-[#F2974A] to-[#F4E077] px-[2px] py-[1px] rounded-full'>
       <button
-        onClick={connectWallet}
+        onClick={account ? disconnectWallet : connectWallet}
         className={`group bg-[#151D31] hover:bg-transparent rounded-full text-[13px] leading-[22px] lg:text-[16px] ${
           props.black ? 'lg:bg-black ' : 'bg-[#151D31]'
         }`}
@@ -51,7 +63,7 @@ const WalletButton = (props: buttonType) => {
             alt='wallet'
           />
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#F2974A] to-[#F4E077] group-hover:text-white group-hover:bg-inherit'>
-            {t('connect_wallet')}
+            {account ? displayAddress(account) : t('connect_wallet')}
           </span>
         </div>
       </button>
