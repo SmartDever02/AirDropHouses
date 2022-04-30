@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import { useEtherBalance, useEthers } from '@usedapp/core';
+
 import useNFTPrice from '../../hooks/useNFTPrice';
 import { useMintNormal, useMintWhitelist } from '../../hooks/useMint';
 import useSaleMode from '../../hooks/useSaleMode';
@@ -12,6 +13,7 @@ import GoldenText from '../Typhography/GoldenText';
 import Gradient from '../Typhography/GradientTitle';
 import EtherInput from './EtherInput';
 import MintInput from './MintInput';
+import { getWhiteListInfo } from '../../helpers/verifyWhitelist';
 
 const MintForm = () => {
   const { account, active } = useEthers();
@@ -26,26 +28,45 @@ const MintForm = () => {
     useMintWhitelist();
 
   useEffect(() => {
-    let msg = stateForMintNormal.errorMessage
-      ? stateForMintNormal.errorMessage
-      : '{}';
-    stateForMintNormal.status === 'Exception' && alert(msg);
+    if (stateForMintNormal) {
+      stateForMintNormal.status === 'Exception' &&
+        alert(stateForMintNormal.errorMessage);
+      stateForMintNormal.status === 'Success' && alert('Mint success!');
+    }
+    if (stateForMintWhitelist) {
+      stateForMintWhitelist.status === 'Exception' &&
+        alert(stateForMintWhitelist.errorMessage);
+      stateForMintWhitelist.status === 'Success' && alert('Mint success!');
+    }
     //alert(stateForMintNormal.errorMessage);
-  }, [stateForMintNormal]);
+  }, [stateForMintNormal, stateForMintWhitelist]);
 
   const HandleMint = async () => {
-    alert('saleMode is ' + saleMode);
     if (!active || !account) {
       alert('Please connect your wallet!');
       return;
     }
-    let result: any;
     if (saleMode === 'PRESALE') {
-      result = await mintWhitelist(account, count, {
+      const data = await getWhiteListInfo(account);
+      console.log('result:', data);
+      if (!data.verified) {
+        alert(data.verified + ' :You are not Whitelist member.');
+        return;
+      }
+      if (count > data.limit) {
+        alert(
+          'You are not allowed to mint ' +
+            count +
+            ' sheets, your limit is' +
+            data.limit
+        );
+        return;
+      }
+      await mintWhitelist(account, count, {
         value: price.mul(count),
       });
     } else if (saleMode === 'PUBLIC_SALE') {
-      result = await mintNormal(account, count, {
+      await mintNormal(account, count, {
         value: price.mul(count),
       });
     } else {

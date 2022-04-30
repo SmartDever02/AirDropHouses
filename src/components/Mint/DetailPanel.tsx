@@ -9,17 +9,17 @@ const DetailPanel = () => {
   const totalCount = useTotalCount().toNumber();
   const timePast = useTimePast().toNumber();
 
-  console.log(timePast / 3600);
+  // console.log(timePast / 3600);
 
   const { t } = useTranslation(['minting']);
 
   const timeToNextBatch = (value: number) => {
-    console.log('next batch', 7200 - (value % 7200));
+    // console.log('next batch', 7200 - (value % 7200));
     return 7200 - (value % 7200);
   };
 
   const timeToPublicSale = (value: number) => {
-    console.log('public:', 21600 - value);
+    // console.log('public:', 21600 - value);
     return 21600 - value;
   };
 
