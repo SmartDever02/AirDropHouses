@@ -1,0 +1,62 @@
+[
+  {
+    "limit": 10,
+    "root": "0xcecc57d6f8251296e81e21fefa6c85c58ceb59ada51310542dcf9f7c300cb9dc",
+    "proves": [
+      "0xa4f7a1ce3cb966258e8059957a8e525f90207d2c27e95d63a9f8f378d603c70e",
+      "0xa4f7a1ce3cb966258e8059957a8e525f90207d2c27e95d63a9f8f378d603c70e"
+    ],
+    "data": [
+      "0x26669e7F200eed7BC383E7194ce052dFb7A4B2C9",
+      "0x26669e7F200eed7BC383E7194ce052dFb7A4B2C9"
+    ]
+  },
+  {
+    "limit": 7,
+    "root": "0x276b0433b8cdd59e80a211acce0e7aa670703c65f55f141668ffaedae82803fa",
+    "proves": [
+      "0xb531957260af4e70ec83ec492eb3d63f4e161816666806a50b62c6009e2ed145",
+      "0xb531957260af4e70ec83ec492eb3d63f4e161816666806a50b62c6009e2ed145"
+    ],
+    "data": [
+      "0xD454BECbBb12E44C3527E2f029A54A3D6767AdC2",
+      "0xD454BECbBb12E44C3527E2f029A54A3D6767AdC2"
+    ]
+  },
+  {
+    "limit": 6,
+    "root": "0xafd20367d302c670f5d5efbec36fa65f6c18886b8d14d32ecb65783c2bb64434",
+    "proves": [
+      "0x0baef08963f0318d3e1f3743b6082f18d2f2af1d8a12ce4d04a06b18184ef777",
+      "0x0baef08963f0318d3e1f3743b6082f18d2f2af1d8a12ce4d04a06b18184ef777"
+    ],
+    "data": [
+      "0x298Ec746109660BA3dBF110EC93B8872B511F117",
+      "0x298Ec746109660BA3dBF110EC93B8872B511F117"
+    ]
+  },
+  {
+    "limit": 3,
+    "root": "0x10bdfca476b0751d86e4cc4c869675df0f35f4ff8535d62a4d3a629ea9625489",
+    "proves": [
+      "0x5b7f114b47adbe460d62af4d0a65af4dd5c38bfc808d29ca68279665a20e56af",
+      "0x5b7f114b47adbe460d62af4d0a65af4dd5c38bfc808d29ca68279665a20e56af"
+    ],
+    "data": [
+      "0x2719b132819Cb00b771D1aAd2aE9bD3Afe70c78a",
+      "0x2719b132819Cb00b771D1aAd2aE9bD3Afe70c78a"
+    ]
+  },
+  {
+    "limit": 1,
+    "root": "0x88db79ea5b82e0238ce23508dc488f30c14f14832750581eb0a92342f05aa87b",
+    "proves": [
+      "0x8339fa2f8e50409bd4f08cdee896dc84712a5a8852839fe0d971d8c108a4308a",
+      "0x8339fa2f8e50409bd4f08cdee896dc84712a5a8852839fe0d971d8c108a4308a"
+    ],
+    "data": [
+      "0x6d8aaEF8Bf5b1d0b22511F5299c649659C9E48F8",
+      "0x6d8aaEF8Bf5b1d0b22511F5299c649659C9E48F8"
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "faq": [
+    { "title": "q1", "content": "a1" },
+    { "title": "q2", "content": "a2" },
+    { "title": "q3", "content": "a3" },
+    { "title": "q4", "content": "a4" }
+  ]
+}

@@ -1,0 +1,37 @@
+- <h1>THESE MUST BE DONE BEFORE YOU DEPLOY THE CONTRACT!!!!!!!!!!!!!!!</h1>
+
+- First change /src/whitelist/whitelist.js with your own data.
+
+- Then execute makeRoots.js
+
+  - cd backend/src/whitelist
+  - node makeRoots.js
+
+- You will get the results like belows. <br>
+  limit: 10
+  root: 0x9f10b11cfda96b16a41c9c7d744f62d363d450d494997b3a5644a451b6f12617 <br>
+  limit: 8
+  root: 0x28ee50ccca7572e60f382e915d3cc323c3cb713b263673ba830ab179d0e5d57f <br>
+  limit: 1
+  root: 0xa49309ce4e2de4032d42ed3763ecc093b8eeca67690bc988b2475e4c385cb3fa <br><br>
+  <b>These should be copied into the Contract's \_merkleRoots.</b>
+
+- In the Contract you can find the constructor.
+  <pre>
+  line 45 in AirdropHouses.sol
+  constructor() ERC721("AirDropHouses", "PSL") {
+    _merkleRoots[10] = 0x9f10b11cfda96b16a41c9c7d744f62d363d450d494997b3a5644a451b6f12617;
+    _merkleRoots[8] = 0x28ee50ccca7572e60f382e915d3cc323c3cb713b263673ba830ab179d0e5d57f;
+    _merkleRoots[1] = 0xa49309ce4e2de4032d42ed3763ecc093b8eeca67690bc988b2475e4c385cb3fa;
+    _strBaseTokenURI = "https://";
+  }
+  </pre>
+
+  Here the index of \_merkleRoots is the limit which means 10 is limit with '0x9f10b11cfda96b16a41c9c7d744f62d363d450d494997b3a5644a451b6f12617'. <br>
+  So if you want make another whitelist groups with different limitation, just add or change the index of \_merkleRoots and its value like this.<br>
+  \_merkleRoots[New_Limit(This should be number)] = 0x....New_Merkle_Root...;<br>
+  But here New_Merkle_Root must be made by the running makeRoots.js.
+
+- You need to replace the merkle tree root data in Smart Contract with these ones, You can change them in Contract's constructor or you can trigger 'setMerkleRoot' function.
+
+- <h1>THESE MUST BE DONE BEFORE YOU DEPLOY THE CONTRACT!!!!!!!!!!!!!!!</h1>

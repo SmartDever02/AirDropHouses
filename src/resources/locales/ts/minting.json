@@ -1,0 +1,36 @@
+{
+  "mint_before_sale_title": "鑄造日期：TBA",
+  "mint_before_sale_subtitle": "請隨時注意官網或 Discord 更新",
+
+  "mint_pre_sale_title": "NFT 預售中",
+  "mint_pre_sale_subtitle_batch_1": "僅限第一梯次白名單錄取者購買",
+  "mint_pre_sale_subtitle_batch_2": "僅限第一及第二梯次白名單錄取者購買",
+  "mint_pre_sale_subtitle_batch_3": "僅限所有白名單錄取者購買",
+
+  "mint_public_sale_title": "NFT 公售中",
+  "mint_public_sale_subtitle": "任何人皆可鑄造",
+  
+  "mint_price": "價格",
+  "mint_amount": "數量",
+  "mint_total_price": "總金額",
+  
+  "nft_left": "剩餘張數",
+  "nft_total": "總剩餘張數",
+
+  "before_sale_next_batch_whitelist_count_down": "下一梯次白名單開放倒數",
+  "before_sale_next_batch_whitelist_count_down_desc": "每 2 小時會開放一梯次白名單",
+  "pre_sale_next_batch_whitelist_count_down": "下一梯次白名單開放倒數",
+  "pre_sale_next_batch_whitelist_count_down_desc": "每 2 小時會開放一梯次白名單",
+  "public_sale_next_batch_whitelist_count_down": "目前鑄造金額",
+  "public_sale_next_batch_whitelist_count_down_desc": "未完成鑄造會以 0.35 ETH 於 二級市場出售",
+
+  "before_sale_next_mint_price_count_down": "鑄造金額調整倒數",
+  "before_sale_next_mint_price_count_down_desc": "每 500 張或 6 小時調整一次金額",
+  "pre_sale_next_mint_price_count_down": "鑄造金額調整倒數",
+  "pre_sale_next_mint_price_count_down_desc": "每 500 張或 6 小時調整一次金額",
+  "public_sale_next_mint_price_count_down": "公售截止倒數計時",
+  "public_sale_next_mint_price_count_down_desc": "時間不等人",
+
+  "mint": "鑄造",
+  "join_discord_for_whitelist": "加入 Discord 獲取白單"
+}

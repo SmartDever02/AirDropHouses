@@ -1,0 +1,175 @@
+{
+  "logo": {
+    "i18name": "logo_title"
+  },
+  "discord": {
+    "whitelist": "join_discord_for_whitelist"
+  },
+  "navbar": [
+    {
+      "i18name": "menu_name_1",
+      "to": "home",
+      "target": false,
+      "ROUTING": false
+    },
+    {
+      "i18name": "menu_name_2",
+      "to": "roadmap",
+      "target": false,
+      "ROUTING": false
+    },
+    {
+      "i18name": "menu_name_3",
+      "to": "manual",
+      "target": false,
+      "ROUTING": false
+    },
+    {
+      "i18name": "menu_name_5",
+      "to": "whitelist",
+      "target": false,
+      "ROUTING": false
+    },
+    {
+      "i18name": "menu_name_6",
+      "to": "faq",
+      "target": false,
+      "ROUTING": false
+    },
+    {
+      "i18name": "menu_name_9",
+      "to": "https://whitepaper.airdrophouses.com",
+      "target": true,
+      "ROUTING": true
+    },
+    {
+      "i18name": "menu_name_7",
+      "to": "/mint",
+      "target": false,
+      "ROUTING": true
+    },
+    {
+      "i18name": "menu_name_8",
+      "to": "/utilities",
+      "target": false,
+      "ROUTING": true
+    }
+  ],
+  "footer": [
+    {
+      "i18name": "link_1",
+      "to": "/disclamer",
+      "ROUTING": true
+    },
+    {
+      "i18name": "link_2",
+      "to": "/whitepaper",
+      "ROUTING": true
+    }
+  ],
+  "section_1": {
+    "title": "scene_1_title",
+    "subtitle": "scene_1_subtitle",
+    "text": ["scene_1_text_1", "scene_1_text_2"]
+  },
+  "section_2": {
+    "title": "scene_2_title",
+    "subtitle": "scene_2_subtitle",
+    "boxTitle": ["scene_2_title_1", "scene_2_title_2", "scene_2_title_3"],
+    "boxText": ["scene_2_text_1", "scene_2_text_2", "scene_2_text_3"]
+  },
+  "section_3": {
+    "title": "scene_3_title"
+  },
+  "faq": [
+    { "title": "q1", "content": "a1" },
+    { "title": "q2", "content": "a2" },
+    { "title": "q3", "content": "a3" },
+    { "title": "q4", "content": "a4" }
+  ],
+  "manual": {
+    "title": "manual_title",
+    "subtitle_important": "important_notice",
+    "important_notice_description": "important_notice_description",
+    "subtitle_1": "manual_subtitle_1",
+    "description_1": "manual_description_1",
+    "subtitle_2": "manual_subtitle_2",
+    "description_2_1": "manual_description_2_1",
+    "description_2_2": "manual_description_2_2",
+    "description_2_3": "manual_description_2_3",
+    "subtitle_3": "manual_subtitle_3",
+    "description_3_1": "manual_description_3_1",
+    "description_3_2": "manual_description_3_2",
+    "description_3_3": "manual_description_3_3",
+    "mint_step_1": "mint_step_1",
+    "mint_step_2": "mint_step_2",
+    "mint_step_3": "mint_step_3",
+    "mint_step_4": "mint_step_4",
+    "subtitle_4": "manual_subtitle_4",
+    "after_mint_step_1": "after_mint_step_1",
+    "after_mint_step_2": "after_mint_step_2",
+    "after_mint_step_3": "after_mint_step_3",
+    "after_mint_step_4": "after_mint_step_4",
+    "subtitle_5": "manual_subtitle_5",
+    "description_5_1": "manual_description_5_1",
+    "description_5_2": "manual_description_5_2",
+    "note": "manual_note"
+  },
+  "roadmap": {
+    "phase_1": {
+      "list_1": "phase_1_list_1",
+      "list_2": "phase_1_list_2",
+      "list_3": "phase_1_list_3",
+      "list_4": "phase_1_list_4"
+    },
+    "phase_2": {
+      "list_1": "phase_2_list_1",
+      "list_2": "phase_2_list_2",
+      "list_3": "phase_2_list_3",
+      "list_4": "phase_2_list_4",
+      "list_5": "phase_2_list_5",
+      "list_6": "phase_2_list_6"
+    },
+    "phase_3": {
+      "list_1": "phase_3_list_1",
+      "list_2": "phase_3_list_2",
+      "list_3": "phase_3_list_3",
+      "list_4": "phase_3_list_4",
+      "list_5": "phase_3_list_5",
+      "list_6": "phase_3_list_6",
+      "list_7": "phase_3_list_7",
+      "list_8": "phase_3_list_8",
+      "list_9": "phase_3_list_9",
+      "list_10": "phase_3_list_10"
+    },
+    "phase_4": {
+      "list_1": "phase_4_list_1",
+      "list_2": "phase_4_list_2",
+      "list_3": "phase_4_list_3",
+      "list_4": "phase_4_list_4"
+    }
+  },
+  "whitelists_communities": [
+    { "name": "mepunk", "link": "https://discord.gg/nGAPH62uEx" },
+    { "name": "bitmen", "link": "https://discord.gg/bitmen" },
+    { "name": "crypto_pioneers_guild", "link": "https://discord.gg/qXX7skkR8X" }
+  ],
+  "whitelists_list": [
+    { "name": "cryptopaul", "link": "https://discord.gg/cryptopaul" },
+    { "name": "alpha_shark", "link": "https://discord.gg/alphasharkclub" },
+    { "name": "alpacadabraz", "link": "https://discord.gg/Alpacadabraz" },
+    { "name": "alphakids", "link": "https://discord.gg/alphakids" },
+    { "name": "apclubnft", "link": "https://discord.gg/apclub" },
+    { "name": "dating_ape", "link": "https://discord.gg/datingape-taiwanclub" },
+    { "name": "valley22", "link": "https://discord.gg/K4cZeUGh" },
+    { "name": "yolo_cat", "link": "https://discord.gg/yolocatclub" },
+    { "name": "star_wing", "link": "" },
+    { "name": "nftclubm", "link": "" },
+    { "name": "suki_kiku", "link": "https://discord.gg/sukikiku" }
+  ],
+  "whitelists_removed": [
+    { "name": "richman_heroes", "link": "https://discord.gg/softstar" },
+    { "name": "elysiumshell", "link": "" },
+    { "name": "phanta_bear", "link": "https://discord.gg/eexRE2uJqp" }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "mint_before_sale_title": "Mint Date: TBA",
+  "mint_before_sale_subtitle": "Please keep an eye on the official website or Discord for updates.",
+
+  "mint_pre_sale_title": "NFT Pre-Sale",
+  "mint_pre_sale_subtitle_batch_1": "First tier whitelist admissions only",
+  "mint_pre_sale_subtitle_batch_2": "First and second tier whitelist admissions only",
+  "mint_pre_sale_subtitle_batch_3": "Only available to all whitelist acceptors",
+
+  "mint_public_sale_title": "NFT Public Sale",
+  "mint_public_sale_subtitle": "Anyone can Mint",
+  
+  "mint_price": "Mint Price",
+  "mint_amount": "Quantity",
+  "mint_total_price": "Mint Total Price",
+
+  "nft_left": "Remaining Amount",
+  "nft_total": "Total Remaining",
+
+  "before_sale_next_batch_whitelist_count_down": "Next tier Whitelist Countdown",
+  "before_sale_next_batch_whitelist_count_down_desc": "Each tier will be released every 2 hours",
+  "pre_sale_next_batch_whitelist_count_down": "Next tier Whitelist Count Down",
+  "pre_sale_next_batch_whitelist_count_down_desc": "Each tier will be released every 2 hours",
+  "public_sale_next_batch_whitelist_count_down": "Current Mint Price",
+  "public_sale_next_batch_whitelist_count_down_desc": "Unminted NFT's will be sold for 0.35 ETH on secondary market",
+
+  "before_sale_next_mint_price_count_down": "Price Adjustment Countdown",
+  "before_sale_next_mint_price_count_down_desc": "Price adjusted every 500 sheets or 6 hours",
+  "pre_sale_next_mint_price_count_down": "Price Adjustment Countdown",
+  "pre_sale_next_mint_price_count_down_desc": "Price adjusted every 500 sheets or 6 hours",
+  "public_sale_next_mint_price_count_down": "Public sale count down",
+  "public_sale_next_mint_price_count_down_desc": "Time doesn't waite",
+
+  "mint": "Mint",
+  "join_discord_for_whitelist": "Join Discord for whitelist"
+}
