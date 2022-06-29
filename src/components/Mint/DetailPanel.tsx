@@ -1,5 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import getBatchNum from '../../helpers/getBatchNumber';
+import { MINT_TEST } from '../../config/config';
+import {
+  getBatchNum,
+  makeTime,
+  timeToNextBatch,
+  timeToNextPrice,
+} from '../../helpers/getFormattedTime';
+import useBatchDuration from '../../hooks/test/useBatchDuration';
+import useSheetsPerPrice from '../../hooks/test/useSheetsPerPrice';
+import useFromLastPriceChange from '../../hooks/useLastPriceTime';
 import useMintedCount from '../../hooks/useMintedCount';
 import useSaleMode from '../../hooks/useSaleMode';
 import useTimePast from '../../hooks/useTimePast';
@@ -7,74 +16,72 @@ import useTotalCount from '../../hooks/useTotalCount';
 import MintCard from './MintCard';
 
 const DetailPanel = () => {
+  const fromLastChange = useFromLastPriceChange();
   const mintedCount = useMintedCount().toNumber();
   const totalCount = useTotalCount().toNumber();
   const timePast = useTimePast().toNumber();
   const saleMode = useSaleMode();
 
+  // For Testing
+  const sheetsPerPrice = useSheetsPerPrice().toNumber();
+  const batchDuration = useBatchDuration().toNumber();
+
   // console.log(timePast / 3600);
 
   const { t } = useTranslation(['minting']);
 
-  const timeToNextBatch = (value: number) => {
-    // console.log('next batch', 7200 - (value % 7200));
-    return 7200 - (value % 7200);
-  };
+  // const timeToNextBatch = (value: number) => {
+  //   // console.log('next batch', 7200 - (value % 7200));
+  //   return 7200 - (value % 7200);
+  // };
 
-  const timeToPublicSale = (value: number) => {
-    // console.log('public:', 21600 - value);
-    return 21600 - value;
-  };
+  // const timeToNextPrice = (value: number) => {
+  //   // console.log('public:', 21600 - value);
+  //   return 21600 - (value % 21600);
+  // };
 
-  const makeTime = (value: number) => {
-    return (
-      Math.floor(value / 3600) +
-      ':' +
-      (Math.floor(value / 60) % 60) +
-      ':' +
-      (value % 60)
-    );
-  };
-
-  const isPublicSale = () => {
-    return false;
-  };
-
-  // If Mint started, hardcode need to change
-  const mintStarted = false;
-
-  // changing text based on status, hardcode num need to change (1,2,3)
-  let status = 'before';
-  let batch = '';
-  if (mintStarted) {
-    const num = 1;
-    status = isPublicSale() ? 'public' : 'pre';
-    batch = '_batch_' + num;
-  }
-
-  // hardcode need to change
-  const totalMinted = 0;
+  // const makeTime = (value: number) => {
+  //   let hour = Math.floor(value / 3600)
+  //     .toString()
+  //     .padStart(2, '0');
+  //   let minute = (Math.floor(value / 60) % 60).toString().padStart(2, '0');
+  //   let second = (value % 60).toString().padStart(2, '0');
+  //   return hour + ':' + minute + ':' + second;
+  // };
 
   return (
-    <div className='Mint_DETAIL mt-[21px] flex flex-col gap-[16px] xl:gap-[18px] mb-[47px] lg:mb-0 lg:-translate-x-[18vw] xl:-translate-x-[15vw] 2xl:-translate-x-[10vw] lg:mt-[120px] xl:mt-[60px] 2xl:mt-[136px]'>
+    <div className='Mint_DETAIL select-none mt-[21px] flex flex-col gap-[16px] xl:gap-[18px] mb-[47px] lg:mb-0 lg:-translate-x-[18vw] xl:-translate-x-[15vw] 2xl:-translate-x-[10vw] lg:mt-[120px] xl:mt-[60px] 2xl:mt-[136px]'>
       <MintCard
         top={t('nft_left')}
-        middle={saleMode === 'pre' ? mintedCount : '2,000'}
-        bottom={`${t('nft_total')} ${mintedCount} / 2,000`}
+        middle={
+          saleMode === 'pre'
+            ? MINT_TEST
+              ? sheetsPerPrice - (mintedCount % sheetsPerPrice)
+              : 500 - (mintedCount % sheetsPerPrice)
+            : 2000 - mintedCount
+        }
+        bottom={`${t('nft_total')} ${2000 - mintedCount} / 2000`}
       />
       <div
         className={`${
-          saleMode === 'public' ||
-          (saleMode === 'pre' && getBatchNum(timePast) >= 4 && 'blur-sm')
+          (saleMode === 'public' ||
+            (saleMode === 'pre' &&
+              (getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 10 ||
+              mintedCount >= MINT_TEST
+                ? sheetsPerPrice * 3
+                : 1500))) &&
+          'blur-sm'
         }`}
       >
         <MintCard
           top={t(saleMode + '_sale_next_batch_whitelist_count_down')}
           middle={
             saleMode === 'pre'
-              ? getBatchNum(timePast) >= 4
-                ? '00:00:00'
-                : makeTime(timeToPublicSale(timePast))
+              ? getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 3
+                ? 'All Whitelist'
+                : makeTime(
+                    timeToNextBatch(MINT_TEST ? batchDuration : 7200, timePast)
+                  )
               : '00:00:00'
           }
           bottom={t(saleMode + '_sale_next_batch_whitelist_count_down_desc')}
@@ -82,17 +89,25 @@ const DetailPanel = () => {
       </div>
       <div
         className={`${
-          saleMode === 'public' ||
-          (saleMode === 'pre' && getBatchNum(timePast) >= 4 && 'blur-sm')
+          (saleMode === 'public' ||
+            (saleMode === 'pre' &&
+              (getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 10 ||
+                mintedCount >= sheetsPerPrice * 3))) &&
+          'blur-sm'
         }`}
       >
         <MintCard
           top={t(saleMode + '_sale_next_mint_price_count_down')}
           middle={
             saleMode === 'pre'
-              ? getBatchNum(timePast) >= 4
+              ? getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 10
                 ? '00:00:00'
-                : makeTime(timeToNextBatch(timePast))
+                : makeTime(
+                    timeToNextPrice(
+                      MINT_TEST ? batchDuration * 3 : 21600,
+                      fromLastChange
+                    )
+                  )
               : '00:00:00'
           }
           bottom={t(saleMode + '_sale_next_mint_price_count_down_desc')}

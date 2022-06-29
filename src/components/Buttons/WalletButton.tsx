@@ -60,7 +60,6 @@ const WalletButton = (props: buttonType) => {
   };
 
   const connectWallet = async () => {
-    alert('connect wallet');
     const provider = await web3Modal.connect();
     const ethersProvider = new ethers.providers.Web3Provider(provider);
     const ethersSigner = ethersProvider.getSigner();

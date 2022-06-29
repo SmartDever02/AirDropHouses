@@ -3,7 +3,8 @@ const getErrorString = (value?: string) => {
     /Error: VM Exception while processing transaction: reverted with reason string '/i,
     ''
   );
-  return phrase1?.replace(/'/i, '');
+  var phrase2 = phrase1?.replace('execution reverted: ', '');
+  return phrase2;
 };
 
 export default getErrorString;

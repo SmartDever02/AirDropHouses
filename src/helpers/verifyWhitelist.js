@@ -22,33 +22,37 @@ export const getWhitelistCount = async () => {
 };
 
 export const getInfoFromJSON = (address) => {
-  var indexInArray;
-  let _data = data.filter((one) => one.data.indexOf(address) >= 0);
-  if (_data.length !== 1) {
+  var batchIndex = -1;
+  var limitIndex = -1;
+  var indexInArray = -1;
+  // console.log('address: ', address);
+  // console.log(data.length);
+  for (let i = 0; i < data.length; i++) {
+    let subData = data[i];
+    for (let j = 0; j < subData.length; j++) {
+      if (subData[j].data.indexOf(address) >= 0) {
+        // alert('same thing');
+        limitIndex = j;
+        indexInArray = subData[j].data.indexOf(address);
+        break;
+      }
+    }
+    if (limitIndex !== -1) {
+      batchIndex = i;
+      break;
+    }
+  }
+  // one.data.indexOf(address) >= 0);
+  if (batchIndex === -1) {
     return {
       proof: null,
       verified: false,
-      limit: _data.limit,
+      limit: 0,
     };
   }
-  indexInArray = _data[0].data.indexOf(address);
-  // let _data = data.filter((one, dataIndex) => {
-  //   indexInArray = one.address.indexOf(address);
-  //   console.log(indexInArray);
-  //   if (indexInArray >= 0) {
-  //     index = dataIndex;
-  //   }
-  //   return indexInArray >= 0;
-  // })[0];
-  // if (indexInArray) {
-  //   return {
-  //     proof: null,
-  //     verified: false,
-  //   };
-  // }
   return {
-    proof: [_data[0].proves[indexInArray]],
-    verified: indexInArray >= 0,
-    limit: _data[0].limit,
+    proof: data[batchIndex][limitIndex].proof[indexInArray],
+    verified: batchIndex >= 0,
+    limit: data[batchIndex][limitIndex].limit,
   };
 };
