@@ -9,6 +9,7 @@ import {
 import useBatchDuration from '../../hooks/test/useBatchDuration';
 import useSheetsPerPrice from '../../hooks/test/useSheetsPerPrice';
 import useFromLastPriceChange from '../../hooks/useLastPriceTime';
+import useLeftPresaleCount from '../../hooks/useLeftPresaleCount';
 import useMintedCount from '../../hooks/useMintedCount';
 import useSaleMode from '../../hooks/useSaleMode';
 import useTimePast from '../../hooks/useTimePast';
@@ -19,12 +20,14 @@ const DetailPanel = () => {
   const fromLastChange = useFromLastPriceChange();
   const mintedCount = useMintedCount().toNumber();
   const totalCount = useTotalCount().toNumber();
+  const leftCount = useLeftPresaleCount().toNumber();
   const timePast = useTimePast().toNumber();
   const saleMode = useSaleMode();
 
   // For Testing
   const sheetsPerPrice = useSheetsPerPrice().toNumber();
   const batchDuration = useBatchDuration().toNumber();
+  const mcount = MINT_TEST ? sheetsPerPrice * 3 : 1500;
 
   // console.log(timePast / 3600);
 
@@ -53,23 +56,16 @@ const DetailPanel = () => {
     <div className='Mint_DETAIL select-none mt-[21px] flex flex-col gap-[16px] xl:gap-[18px] mb-[47px] lg:mb-0 lg:-translate-x-[18vw] xl:-translate-x-[15vw] 2xl:-translate-x-[10vw] lg:mt-[120px] xl:mt-[60px] 2xl:mt-[136px]'>
       <MintCard
         top={t('nft_left')}
-        middle={
-          saleMode === 'pre'
-            ? MINT_TEST
-              ? sheetsPerPrice - (mintedCount % sheetsPerPrice)
-              : 500 - (mintedCount % sheetsPerPrice)
-            : 2000 - mintedCount
-        }
+        middle={saleMode === 'pre' ? leftCount : 2000 - mintedCount}
         bottom={`${t('nft_total')} ${2000 - mintedCount} / 2000`}
       />
       <div
         className={`${
           (saleMode === 'public' ||
+            saleMode === 'before' ||
             (saleMode === 'pre' &&
-              (getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 10 ||
-              mintedCount >= MINT_TEST
-                ? sheetsPerPrice * 3
-                : 1500))) &&
+              getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 10) ||
+            mintedCount >= mcount) &&
           'blur-sm'
         }`}
       >
@@ -90,9 +86,10 @@ const DetailPanel = () => {
       <div
         className={`${
           (saleMode === 'public' ||
+            saleMode === 'before' ||
             (saleMode === 'pre' &&
               (getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 10 ||
-                mintedCount >= sheetsPerPrice * 3))) &&
+                mintedCount >= mcount))) &&
           'blur-sm'
         }`}
       >

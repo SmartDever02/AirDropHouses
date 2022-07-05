@@ -17,7 +17,10 @@ const MintNow = (props: any) => {
     if (props.disable) {
       return true;
     }
-    return saleMode === 'pre' && getBatchNum(timePast) >= 10 ? true : false;
+    return saleMode === 'before' ||
+      (saleMode === 'pre' && getBatchNum(timePast) >= 10)
+      ? true
+      : false;
   };
 
   return (

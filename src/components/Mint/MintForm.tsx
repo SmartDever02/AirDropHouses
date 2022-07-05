@@ -118,13 +118,16 @@ const MintForm = () => {
   });
 
   const shouldDisabled = () => {
+    console.log('minted count: ', mintedCount);
     if (saleMode === 'pre') {
-      return stateForMintWhitelist.status === 'Mining' ||
+      let mcount = MINT_TEST ? sheetsPerPrice * 3 : 1500;
+
+      return (
+        stateForMintWhitelist.status === 'Mining' ||
         stateForMintWhitelist.status === 'PendingSignature' ||
         getBatchNum(timePast, MINT_TEST ? batchDuration : 7200) >= 10 ||
-        mintedCount >= MINT_TEST
-        ? sheetsPerPrice * 3
-        : 1500;
+        mintedCount >= mcount
+      );
     } else if (saleMode === 'public') {
       return (
         stateForMintNormal.status === 'Mining' ||

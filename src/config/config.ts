@@ -5,7 +5,7 @@ export const TESTNET_RPC_URL =
   'https://rinkeby.infura.io/v3/5a99373559f8468eb4d40e15b3dd9812';
 export const HARDHAT_RPC_URL = 'http://localhost:8545';
 
-export const contractAddress = '0xB7EE71b40c4e7BFeA786ac2e7e735322C268E7eC';
+export const contractAddress = '0x9BF017c0Edf4be8A59d676fAEa801d7A98D28C56';
 // Hard hat 31337
 export const NETWORK_ID = DEBUG ? 4 : 1;
 export const RPC_URL = NETWORK_ID === 4 ? TESTNET_RPC_URL : MAINNET_RPC_URL;
