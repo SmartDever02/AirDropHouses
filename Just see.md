@@ -1,5 +1,7 @@
 https://rinkeby.etherscan.io/address/0x9BF017c0Edf4be8A59d676fAEa801d7A98D28C56
 
+//Git push not displayed why?
+
 I set the batch time 1 hour for test and you can set it with setTimePerBatch
 https://rinkeby.etherscan.io/address/0x9BF017c0Edf4be8A59d676fAEa801d7A98D28C56#writeContract
 and also sheets per price is 10 now for test, and you can change it with setSheetsPerPrice
