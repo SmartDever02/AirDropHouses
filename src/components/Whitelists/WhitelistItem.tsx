@@ -19,7 +19,13 @@ const WhitelistItem = (props: itemType) => {
         }`}
         onClick={() => props.link && window.open(props.link, '_blank')}
       >
-        <Img src={image} alt='*' loader={loader} />
+        <Img
+          src={image}
+          alt='*'
+          loader={loader}
+          draggable={false}
+          className='select-none'
+        />
       </div>
     );
   } catch {

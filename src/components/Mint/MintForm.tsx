@@ -14,7 +14,6 @@ import useTimePast from '../../hooks/useTimePast';
 import config, { MINT_TEST } from '../../config/config';
 import MintNow from '../Buttons/MintNow';
 import GoldenText from '../Typhography/GoldenText';
-import Gradient from '../Typhography/GradientTitle';
 import EtherInput from './EtherInput';
 import MintInput from './MintInput';
 import {

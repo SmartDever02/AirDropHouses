@@ -21,22 +21,70 @@ const RoomCarousel = () => {
       showArrows={false}
     >
       <div>
-        <img src={room1} alt='p1' className='rounded-[12px]' />
+        <img
+          src={room1}
+          alt='p1'
+          className='rounded-[12px]'
+          loading='lazy'
+          draggable={false}
+          width='645'
+          height='645'
+        />
       </div>
       <div>
-        <img src={room2} alt='p2' className='rounded-[12px]' />
+        <img
+          src={room2}
+          alt='p2'
+          className='rounded-[12px]'
+          loading='lazy'
+          draggable={false}
+          width='645'
+          height='645'
+        />
       </div>
       <div>
-        <img src={room3} alt='p3' className='rounded-[12px]' />
+        <img
+          src={room3}
+          alt='p3'
+          className='rounded-[12px]'
+          loading='lazy'
+          draggable={false}
+          width='645'
+          height='645'
+        />
       </div>
       <div>
-        <img src={room4} alt='p4' className='rounded-[12px]' />
+        <img
+          src={room4}
+          alt='p4'
+          className='rounded-[12px]'
+          loading='lazy'
+          draggable={false}
+          width='645'
+          height='645'
+        />
       </div>
       <div>
-        <img src={room5} alt='p5' className='rounded-[12px]' />
+        <img
+          src={room5}
+          alt='p5'
+          className='rounded-[12px]'
+          loading='lazy'
+          draggable={false}
+          width='645'
+          height='645'
+        />
       </div>
       <div>
-        <img src={room6} alt='p6' className='rounded-[12px]' />
+        <img
+          src={room6}
+          alt='p6'
+          className='rounded-[12px]'
+          loading='lazy'
+          draggable={false}
+          width='645'
+          height='645'
+        />
       </div>
     </Carousel>
   );

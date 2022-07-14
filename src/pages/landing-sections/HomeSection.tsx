@@ -26,12 +26,16 @@ const HomeSection = () => {
   const { t } = useTranslation(['landing']);
 
   return (
-    <section className='home-section pt-[88px] md:pt-[80px] w-screen relative before:absolute before:top-0 before:left-0 before:w-screen before:h-screen before:content-[""] before:bg-[url("resources/images/landing/wave.png")] before:bg-contain before:bg-no-repeat before:scale-x-[2] sm:before:scale-x-[2] before:scale-y-[3] before:translate-y-[120%] sm:before:scale-y-[2.5] sm:before:translate-y-[95%] md:before:scale-y-[2] sm:before:translate-x-[2.3vw] md:before:translate-x-[3vw] lg:before:translate-x-0 md:before:translate-y-[50%] lg:before:scale-[1] lg:before:translate-y-[80px]'>
+    <section className='home-section pt-[88px] md:pt-[80px] w-screen relative before:absolute before:top-0 before:left-0 before:w-screen before:h-screen before:content-[""] before:bg-[url("resources/images/landing/wave.png")] before:bg-contain before:bg-no-repeat before:scale-x-[2] sm:before:scale-x-[2] before:scale-y-[3] before:translate-y-[120%] sm:before:scale-y-[2.5] sm:before:translate-y-[95%] md:before:scale-y-[2] sm:before:translate-x-[2.3vw] md:before:translate-x-[3vw] lg:before:translate-x-0 md:before:translate-y-[50%] lg:before:scale-[1] lg:before:translate-y-[80px] select-text'>
       <div className='relative flex flex-col-reverse lg:flex-row'>
         <img
           src={landingHouse}
           alt='house'
-          className='static lg:absolute mt-[2vw] md:mt-[4vw] lg:mt-0 lg:top-[5.5vw] xl:top-[5vw] 2xl:top-[4vw] block lg:right-0 z-1 -translate-x-[3vw] md:-translate-y-[3vw] lg:-translate-x-0 scale-[1.05] lg:scale-100 lg:w-[54vw] xl:w-[55.5vw] 2xl:w-[58vw]'
+          width='888'
+          height='597'
+          draggable={false}
+          loading='lazy'
+          className='static lg:absolute mt-[2vw] md:mt-[4vw] lg:mt-0 lg:top-[5.5vw] xl:top-[5vw] 2xl:top-[4vw] block lg:right-0 z-1 -translate-x-[3vw] md:-translate-y-[3vw] lg:-translate-x-0 scale-[1.05] lg:scale-100 lg:w-[54vw] xl:w-[55.5vw] 2xl:w-[58vw] select-none'
         />
         <div className='w-full lg:w-1/2'>
           <div className='pt-0 md:pt-[45px] lg:pt-[60px] xl:pt-[80px] 2xl:pt-[102px] 3xl:pt-[8vw] pl-0 md lg:pl-[90px] lg:[150px] xl:pl-[180px] 2xl:pl-[9vw] w-[320px] sm:w-[366px] md:w-[800px] xl:w-[830px] 2xl:w-[45.8vw] mx-auto lg:mx-0 2xl:ml-auto 2xl:scale-[1.15]'>
@@ -55,8 +59,15 @@ const HomeSection = () => {
         </div>
       </div>
       <div className='relative pt-[20px] sm:pt-[30px] md:pt-[100px] lg:pt-[120px] xl:pt-[200px] 2xl:pt-[350px] pb-[30px] md:pb-[60px] xl:pb-[91px] text-center px-[25px]'>
-        <div className='hidden lg:block absolute top-[6vw]'>
-          <img src={starFall} alt='starfall' />
+        <div className='hidden lg:block absolute top-[6vw] select-none'>
+          <img
+            src={starFall}
+            alt='starfall'
+            draggable={false}
+            loading='lazy'
+            width='837'
+            height='340'
+          />
         </div>
         <Gradient>{t(data.section_2.title)}</Gradient>
         <p className='text-[18px] leading-7 font-bold text-white pt-[10px]'>
@@ -73,7 +84,7 @@ const HomeSection = () => {
           <Gradient>{t(data.section_3.title)}</Gradient>
         </div>
         <div className='flex flex-col lg:flex-row px-[5%] md:px-[14%] lg:px-[7%] 2xl:px-[13.3%] w-full gap-6 pt-[15px] md:pt-[40px] xl:pt-[62.5px] justify-center items-center'>
-          <div className='w-full max-w-[645px] RoomCarousel'>
+          <div className='w-full max-w-[645px] RoomCarousel select-none'>
             <RoomCarousel />
           </div>
           <div className='w-full max-w-[750px]'>

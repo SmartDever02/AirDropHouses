@@ -1,9 +1,7 @@
-https://rinkeby.etherscan.io/address/0x9BF017c0Edf4be8A59d676fAEa801d7A98D28C56
-
-//Git push not displayed why?
+https://rinkeby.etherscan.io/address/0x119b0Bab0470FbB12d2e897E1a8C7EBCd67c51C1
 
 I set the batch time 1 hour for test and you can set it with setTimePerBatch
-https://rinkeby.etherscan.io/address/0x9BF017c0Edf4be8A59d676fAEa801d7A98D28C56#writeContract
+https://rinkeby.etherscan.io/address/0x119b0Bab0470FbB12d2e897E1a8C7EBCd67c51C1#writeContract
 and also sheets per price is 10 now for test, and you can change it with setSheetsPerPrice
 
 <p>

@@ -9,7 +9,7 @@ const NewFooter = (props: footerType) => {
   const { t } = useTranslation(['footer']);
 
   return (
-    <footer className='w-screen lg:fixed lg:bottom-0 bg-[#151D31] lg:bg-black left-0 h-[180px] border-t-[1px] border-t-[#373740] text-white lg:translate-y-[125px] lg:hover:translate-y-0 transition-all delay-150 duration-300 flex items-center lg:items-start z-30'>
+    <footer className='w-screen lg:fixed lg:bottom-0 bg-[#151D31] lg:bg-black left-0 h-[180px] border-t-[1px] border-t-[#373740] text-white lg:translate-y-[125px] lg:hover:translate-y-0 transition-all delay-150 duration-300 flex items-center lg:items-start z-30 select-none'>
       <div className='px-[35px] md:px-0 md:max-w-[780px] lg:max-w-[1100px] xl:max-w-[1350px] 2xl:max-w-[1480px] w-full mx-auto pt-0 lg:pt-[18px] grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5'>
         <div className='flex order-4 md:order-1 flex-row flex-wrap md:flex-col gap-0 md:gap-[8px] text-[14px] leading-[26px] font-medium text-white'>
           <span className='text-[#8A8AA0] w-1/5 md:w-auto'>{t('about')}</span>
@@ -109,9 +109,9 @@ const NewFooter = (props: footerType) => {
           >
             English
           </span>
-          <div className='footer-nav-item w-1/5 md:w-auto'>
+          {/* <div className='footer-nav-item w-1/5 md:w-auto'>
             ©2022 Airdrop Houses
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

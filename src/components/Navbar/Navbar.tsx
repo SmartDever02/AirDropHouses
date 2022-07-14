@@ -12,7 +12,7 @@ const Navbar = (props: any) => {
   const { t } = useTranslation(['navbar']);
 
   return (
-    <div className='fixed top-0 left-0 w-screen z-30'>
+    <div className='fixed top-0 left-0 w-screen z-30 select-none'>
       <div
         className={`hidden w-full h-[88px] lg:h-[80px] border-b-[1px] border-b-[#373740] lg:flex items-center z-[100] ${
           props.black ? 'bg-black' : 'bg-[#151D31]'

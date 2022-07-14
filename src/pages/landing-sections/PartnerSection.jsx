@@ -34,7 +34,8 @@ const PartnerSection = () => {
           src={require('../../resources/images/utilities/companies/' +
             partner.img_url)}
           alt='comp'
-          className='h-[20px] md:h-[50px] max-w-fit cursor-pointer'
+          draggable={false}
+          className='h-[20px] md:h-[50px] max-w-fit cursor-pointer select-none'
           onClick={() => window.open(partner.link, '_blank')}
         />
       );
