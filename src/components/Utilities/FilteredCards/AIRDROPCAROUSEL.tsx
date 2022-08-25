@@ -25,7 +25,7 @@ const AirDropCarousel = ({ images, path, publicData }: carouselType) => {
         transitionTime={1000}
         showIndicators={false}
         showStatus={false}
-        showArrows={false}
+        showArrows={true}
         showThumbs={false}
         renderArrowPrev={(clickHandler, hasPrev, labelPrev) => (
           <div
@@ -54,15 +54,17 @@ const AirDropCarousel = ({ images, path, publicData }: carouselType) => {
           />
         ))}
       </Carousel>
-      <div
-        className={`w-[200px] h-[36px] absolute left-1/2 bottom-[10px] -translate-x-[50%] rounded-[13px] text-[14px] font-bold flex justify-center items-center ${
-          publicData.public
-            ? 'bg-gradient-to-r from-[#F2974A] to-[#F4E077] text-black'
-            : 'bg-[#7A798A] text-white'
-        }`}
-      >
-        {publicData.text}
-      </div>
+      {publicData ?(
+        <div
+          className={`w-[200px] h-[36px] absolute left-1/2 bottom-[10px] -translate-x-[50%] rounded-[13px] text-[14px] font-bold flex justify-center items-center ${
+            publicData.public
+              ? 'bg-gradient-to-r from-[#F2974A] to-[#F4E077] text-black'
+              : 'bg-[#7A798A] text-white'
+          }`}
+        >
+          {publicData.text}
+        </div>
+      ): (<div></div>)}
     </>
   );
 };
@@ -70,7 +72,7 @@ const AirDropCarousel = ({ images, path, publicData }: carouselType) => {
 interface carouselType {
   images: Array<string>;
   path: string;
-  publicData: any;
+  publicData?: any;
 }
 
 export default AirDropCarousel;

@@ -1,3 +1,5 @@
+/* import { fetchJson } from 'ethers/lib/utils'; */
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import DiscordButton from '../../components/Buttons/DiscordButton';
@@ -9,10 +11,20 @@ import WhitelistItem from '../../components/Whitelists/WhitelistItem';
 import config from '../../config/config';
 
 import data from '../../data/structure/landing.json';
+const vip = data.whitelists_communities;
+const list = data.whitelists_list.sort(() => Math.random() - 0.5);
+let whitelists = [...vip, ...list];
+let filteredWhitelists = [];
 
 const WhitelistSection = () => {
   const { t } = useTranslation(['landing']);
-  let whitelists = data.whitelists;
+  let [limit, setLimit] = useState(10);
+  filteredWhitelists = whitelists.slice(0, limit);
+  
+
+  useEffect(() => {
+    filteredWhitelists = whitelists.slice(0, limit);
+  });
 
   return (
     <section className='whitelist-section relative pt-[30px] md:pt-[85px] xl:pt-[110px] text-center'>
@@ -48,7 +60,7 @@ const WhitelistSection = () => {
             </p>
           </div>
           <div className='w-full mt-[15px] md:mt-[20px] xl:mt-[30px] px-[10%] md:px-[5%] grid sm:grid-cols-1 md:grid-cols-5 gap-[8px] md:gap-x-[20px] md:gap-y-[14px] xl:gap-x-[30px] xl:gap-y-[21px]'>
-            {whitelists.map((one, index) => (
+            {filteredWhitelists.slice(0, limit).map((one, index) => (
               <WhitelistItem
                 key={index}
                 index={index + 1}
@@ -57,7 +69,10 @@ const WhitelistSection = () => {
               />
             ))}
           </div>
-          <div className='mt-[16px] sm:mt-[20px] md:mt-[36px] xl:mt-[52px]'>
+          <div
+            className='mt-[16px] sm:mt-[20px] md:mt-[36px] xl:mt-[52px]'
+            onClick={() => setLimit(limit === 10 ? whitelists.length : 10)}
+          >
             <ButtonMore>{t('see_more')}</ButtonMore>
           </div>
         </div>

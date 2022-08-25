@@ -5,6 +5,7 @@ import LanguageBar from './LanguageBar';
 //import structure
 import data from '../../data/structure/landing.json';
 import { Link } from 'react-router-dom';
+import config from '../../config/config';
 
 const Footer = () => {
   const { t } = useTranslation(['footer']);
@@ -18,7 +19,7 @@ const Footer = () => {
             <FooterText>{t(footerData[0].i18name)}</FooterText>
           </Link>
           <div className='hidden lg:block'>
-            <a target="_blank" href="https://whitelabel.airdrophouses.com" rel="noreferrer">
+            <a target="_blank" href={config.whitepaper_url} rel="noreferrer">
               <FooterText>{t(footerData[1].i18name)}</FooterText>
             </a>
           </div>

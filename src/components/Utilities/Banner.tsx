@@ -24,7 +24,7 @@ const Banner = () => {
           <CardGroup />
         </Transition>
       </div>
-      <div className='absolute text-[16px] md:text-[30px] lg:text-[40px] xl:text-[56px] md:leading-[40px] lg:leading-[50px] xl:leading-[68px] font-bold text-white top-[40px] left-[30px] md:top-[45px] md:left-[80px] lg:top-[40px] lg:left-[90px] xl:top-[80px] 2xl:top-[110px] xl:left-[150px] 2xl:left-[200px] flex flex-col gap-[16px]'>
+      <div className='absolute text-[16px] md:text-[30px] lg:text-[40px] xl:text-[56px] md:leading-[40px] lg:leading-[50px] xl:leading-[68px] font-bold text-white top-[40px] left-[30px] md:top-[45px] md:left-[80px] lg:top-[40px] lg:left-[90px] xl:top-[80px] 2xl:top-[110px] xl:left-[150px] 2xl:left-[200px] 3xl:left-[12vw] flex flex-col gap-[16px]'>
         <Transition
           appear
           show={show}

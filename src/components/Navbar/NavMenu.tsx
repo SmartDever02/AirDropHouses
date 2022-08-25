@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { scroller } from 'react-scroll';
+/* import { scroller } from 'react-scroll'; */
 import NavItem from './Navitem';
 
 import data from '../../data/structure/landing.json';
@@ -24,6 +24,7 @@ const NavMenu = (props: propsType) => {
           onClick={props.handleClick}
           to={one.to}
           Routing={one.ROUTING}
+          target={one.target}
           active={one.to.search(props.page) !== -1}
         >
           {/* {t(one.text)} */}

@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { useEtherBalance, useEthers } from '@usedapp/core';
 import Web3Modal from 'web3modal';
+import WalletConnectProvider from '@walletconnect/web3-provider';
+import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
+
 import { ethers } from 'ethers';
 
 import { Transition } from '@headlessui/react';
@@ -23,11 +26,31 @@ const WalletButton = (props: buttonType) => {
 
   const providerOptions = {
     /* See Provider Options Section */
+    // injected: {
+    //   display: {
+    //     name: 'Metamask',
+    //     description: 'Connect with the provider in your Browser',
+    //   },
+    //   package: null,
+    // },
+    // coinbasewallet: {
+    //   package: CoinbaseWalletSDK,
+    //   options: {
+    //     appName: 'Web 3 Modal Demo',
+    //     infuraId: process.env.INFURA_KEY,
+    //   },
+    // },
+    // walletconnect: {
+    //   package: WalletConnectProvider,
+    //   options: {
+    //     infuraId: '5280d46235c14d18b6daafee5196a01d',
+    //   },
+    // },
   };
   const web3Modal = new Web3Modal({
     network: 'mainnet', // optional
     cacheProvider: true, // optional
-    providerOptions, // required
+    providerOptions,
   });
 
   const disconnectWallet = async () => {

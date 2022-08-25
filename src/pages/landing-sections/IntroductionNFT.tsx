@@ -5,7 +5,7 @@ import Content from '../../components/Typhography/Content';
 import Gradient from '../../components/Typhography/GradientTitle';
 
 //import introduction ntf image.
-import introImage from '../../resources/images/landing/blind_box.gif';
+// import introImage from '../../resources/images/landing/blind_box.gif';
 
 const IntroductonNFT = () => {
   const { t } = useTranslation(['landing']);
@@ -27,7 +27,7 @@ const IntroductonNFT = () => {
       </div>
 
       {/* <img src={introImage} alt='intro' className='w-[1400px]' /> */}
-      <div className='text-white w-full px-[5%] md:px-[170px] lg:px-[35%] -translate-y-[30px] sm:-translate-y-[20px] lg:-translate-y-[100px]'>
+      <div className='text-white w-full pt-[30px] px-[5%] md:px-[170px] lg:px-[35%] -translate-y-[30px] sm:-translate-y-[20px] lg:-translate-y-[100px]'>
         <MintButton introduction>
           <span className='leading-[22px]'>{t('mint')}</span>
         </MintButton>

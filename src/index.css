@@ -6,17 +6,21 @@
   body {
     font-family: 'Urbanist';
   }
+  button,
+  a {
+    outline: none;
+  }
   a {
     @apply cursor-pointer;
   }
   ::-webkit-scrollbar {
     width: 5px;
     height: 8px;
-    background-color: #aaa; /* or add it to the track */
+    background-color: #000; /* or add it to the track */
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: white;
   }
 }
 

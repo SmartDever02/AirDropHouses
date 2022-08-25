@@ -1,13 +1,14 @@
 import { Transition } from '@headlessui/react';
-import { useSelector } from 'react-redux';
-import { stateType } from '../app/store';
+/* import { useSelector } from 'react-redux';
+import { stateType } from '../app/store'; */
 import CARD_DETAIL from '../components/Utilities/FilteredCards/CARD_DETAIL';
 import SIMPLE_CARD from '../components/Utilities/FilteredCards/CARD_SIMPLE';
-import config from '../config/config';
+/* import config from '../config/config'; */
 import metadata from '../data/structure/utility.json';
-import getCompanyName from './getCompanyName';
+/* import getCompanyName from './getCompanyName'; */
 
-const utilities = metadata.utilities;
+/* const utilities = metadata.utilities; */
+const utilities_data = metadata.data;
 
 const delays = [
   'transition-opacity duration-[400ms] delay-[100ms]',
@@ -27,11 +28,11 @@ const delays = [
   'transition-opacity duration-[400ms] delay-[1500ms]',
 ];
 
-const notFound = (
+/* const notFound = (
   <div className='col-span-2 text-white text-[100px] md:text-[150px] font-semibold md:font-bold flex justify-center items-center'>
     (˚Δ˚)b
   </div>
-);
+); */
 
 const TransitionWrapper = (props: any) => {
   return (
@@ -47,174 +48,71 @@ const TransitionWrapper = (props: any) => {
   );
 };
 
-export const getAirDropHouses = (initDelay?: number, company?: string) => {
-  return (
-    <>
-      {utilities.airdrop_houses.data.map(
-        (data, index) =>
-          company === 'coOper_label' && (
-            <TransitionWrapper
-              key={data.title}
-              index={initDelay ? index + initDelay : index}
-            >
-              <CARD_DETAIL
-                index={index + 1}
-                type={utilities.airdrop_houses.type}
-                data={data}
-              />
-            </TransitionWrapper>
-          )
-      )}
-    </>
-  );
-};
-
-export const getAirDropPay = (initDelay?: number, company?: string) => {
-  return (
-    <>
-      {utilities.airdrop_down_pay.data.map(
-        (data, index) =>
-          company === 'coOper_label' && (
-            <TransitionWrapper
-              key={data.title}
-              index={initDelay ? index + initDelay : index}
-            >
-              <CARD_DETAIL
-                index={index + 1}
-                type={utilities.airdrop_down_pay.type}
-                data={data}
-              />
-            </TransitionWrapper>
-          )
-      )}
-    </>
-  );
-};
-
-export const getRealEstateDiscount = (
+export const getAirDrop = (
+  type: string,
   initDelay?: number,
-  type?: string,
   company?: string
 ) => {
-  const red = utilities.real_estate_discount;
-  const companies = red.partner;
-
-  const resultLength = red.data.filter(
+  const filtered = utilities_data.filter(
     (data, index) =>
-      company === undefined ||
+      (company === undefined ||
       company === 'coOper_label' ||
-      getCompanyName(company) === companies[index].company
-  ).length;
-
+      data.company_name === company) && (data.type === type)
+  );
   return (
     <>
-      {red.data.map(
+      {filtered.map(
         (data, index) =>
-          (company === undefined ||
-            company === 'coOper_label' ||
-            getCompanyName(company) === companies[index].company) && (
-            <TransitionWrapper
-              key={index}
-              index={initDelay ? index + initDelay : index}
-            >
-              <SIMPLE_CARD
-                index={index + 1}
-                type={utilities.real_estate_discount.type}
-                image={utilities.real_estate_discount.image}
-                data={data}
-                link={companies[index].link}
-              />
-            </TransitionWrapper>
-          )
+          <TransitionWrapper
+            key={index}
+            index={initDelay ? index + initDelay : index}
+          >
+            <CARD_DETAIL
+              index={index + 1}
+              type={data.type}
+              images={data.utility_images}
+              content={data.content}
+              title={data.title}
+              details={data.details || []}
+              public={data.public}
+              winning_wallet={data.winning_wallet}
+              date={data.date || ''}
+              airdrop={data.airdrop || ''}
+            />
+          </TransitionWrapper>
       )}
-      {type === 'real_estate_discount' && resultLength === 0 && notFound}
+      {/* {resultLength === 0 && notFound } */}
     </>
   );
 };
 
-export const getDedicatedService = (
+export const getUtilities = (
+  type: string,
   initDelay?: number,
-  type?: string,
   company?: string
 ) => {
-  const ds = utilities.dedicated_service;
-  const companies = ds.partner;
-  const resultLength = ds.data.filter(
+  const filtered = utilities_data.filter(
     (data, index) =>
-      company === undefined ||
+      (company === undefined ||
       company === 'coOper_label' ||
-      getCompanyName(company) === companies[index].company
-  ).length;
-  return (
-    <>
-      {ds.data.map(
-        (data, index) =>
-          (company === undefined ||
-            company === 'coOper_label' ||
-            getCompanyName(company) === companies[index].company) && (
-            <TransitionWrapper
-              key={index}
-              index={initDelay ? index + initDelay : index}
-            >
-              <SIMPLE_CARD
-                index={index + 1}
-                type={utilities.dedicated_service.type}
-                image={utilities.dedicated_service.image}
-                data={data}
-                link={companies[index].link}
-              />
-            </TransitionWrapper>
-          )
-      )}
-      {type === 'dedicated_service' && resultLength === 0 && notFound}
-    </>
+      data.company_name === company) && (data.type === type)
   );
-};
-
-export const getOther = (initDelay?: number, company?: string) => {
-  const other = utilities.other;
-  const companies = other.partner;
+  
   return (
     <>
-      {other.data.map(
+      {filtered.map(
         (data, index) =>
-          (company === undefined ||
-            company === '' ||
-            getCompanyName(company) === companies[index].company) && (
-            <TransitionWrapper
-              key={index}
-              index={initDelay ? index + initDelay : index}
-            >
-              <SIMPLE_CARD
-                index={index + 1}
-                type={utilities.other.type}
-                image={utilities.other.image}
-                data={data}
-                link={companies[index].link}
-              />
-            </TransitionWrapper>
-          )
-      )}
-    </>
-  );
-};
-
-export const getBankService = (initDelay?: number) => {
-  return (
-    <>
-      {utilities.bank_service.data.map((data, index) => (
-        <TransitionWrapper
-          key={index}
-          index={initDelay ? index + initDelay : index}
-        >
-          <SIMPLE_CARD
-            index={index + 1}
-            type={utilities.bank_service.type}
-            image={utilities.bank_service.image}
-            data={data}
-          />
-        </TransitionWrapper>
-      ))}
+          <TransitionWrapper
+            key={index}
+            index={initDelay ? index + initDelay : index}
+          >
+            <SIMPLE_CARD
+              index={index + 1}
+              type={type}
+              data={data}
+            />
+          </TransitionWrapper>
+    )}
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify';
 import DetailPanel from '../../components/Mint/DetailPanel';
 import MintForm from '../../components/Mint/MintForm';
 
@@ -16,6 +17,7 @@ const MintSection = () => {
         <MintForm />
         <DetailPanel />
       </div>
+      <ToastContainer />
     </div>
   );
 };

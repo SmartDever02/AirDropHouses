@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { useScrollBlock } from '../../hooks/useScrollBlock';
+/* import { useScrollBlock } from '../../hooks/useScrollBlock'; */
 import LanguageBar from '../Footer/LanguageBar';
 import NavMenu from '../Navbar/NavMenu';
 
 const Sidebar = (props: sidebarType) => {
-  const [blockScroll, allowScroll] = useScrollBlock();
+  /* const [blockScroll, allowScroll] = useScrollBlock(); */
 
   return (
     <div

@@ -1,60 +1,34 @@
 import { useSelector } from 'react-redux';
 import { stateType } from '../../app/store';
 
-import metadata from '../../data/structure/utility.json';
 import {
-  getAirDropHouses,
-  getAirDropPay,
-  getBankService,
-  getDedicatedService,
-  getOther,
-  getRealEstateDiscount,
+  getAirDrop,
+  getUtilities,
 } from '../../helpers/getDataByType';
 
 const FilteredData = () => {
   const filters = useSelector((state: stateType) => state.filters);
 
-  const utilities = metadata.utilities;
-
   return (
     <>
       {filters.type === 'utilityType_label' && (
         <div className='mt-[20px] md:mt-[47px] grid grid-cols-1 md:grid-cols-2 gap-[13px]'>
-          {getDedicatedService(undefined, filters.type, filters.coOper)}
-          {getRealEstateDiscount(1, filters.type, filters.coOper)}
-          {getAirDropHouses(6, filters.coOper)}
-          {getAirDropPay(7, filters.coOper)}
+          {getUtilities('dedicated_service', undefined, filters.coOper)}
+          {getUtilities('real_estate_discount', 1, filters.coOper)}
+          {getUtilities('bank_service', 3, filters.coOper)}
+          {getUtilities('interior_related', 4, filters.coOper)}
+          {getAirDrop('airdrop_houses', 6, filters.coOper)}
+          {getAirDrop('airdrop_down_pay', 7, filters.coOper)}
         </div>
       )}
-      {filters.type === 'airdrop_houses' && (
+      {!['airdrop_down_pay', 'airdrop_houses', 'utilityType_label'].includes(filters.type) && (
         <div className='mt-[20px] md:mt-[47px] grid grid-cols-1 md:grid-cols-2 gap-[13px]'>
-          {getAirDropHouses()}
+          {getUtilities(filters.type, undefined, filters.coOper)}
         </div>
       )}
-      {filters.type === 'airdrop_down_pay' && (
+      {['airdrop_down_pay', 'airdrop_houses'].includes(filters.type) && (
         <div className='mt-[20px] md:mt-[47px] grid grid-cols-1 md:grid-cols-2 gap-[13px]'>
-          {getAirDropPay()}
-        </div>
-      )}
-
-      {filters.type === 'real_estate_discount' && (
-        <div className='mt-[20px] md:mt-[47px] grid grid-cols-1 md:grid-cols-2 gap-[13px]'>
-          {getRealEstateDiscount(undefined, filters.type, filters.coOper)}
-        </div>
-      )}
-      {filters.type === 'dedicated_service' && (
-        <div className='mt-[20px] md:mt-[47px] grid grid-cols-1 md:grid-cols-2 gap-[13px]'>
-          {getDedicatedService(undefined, filters.type, filters.coOper)}
-        </div>
-      )}
-      {filters.type === 'other' && (
-        <div className='mt-[20px] md:mt-[47px] grid grid-cols-1 md:grid-cols-2 gap-[13px]'>
-          {getOther(undefined, filters.coOper)}
-        </div>
-      )}
-      {filters.type === 'bank_service' && (
-        <div className='mt-[20px] md:mt-[47px] grid grid-cols-1 md:grid-cols-2 gap-[13px]'>
-          {getBankService()}
+          {getAirDrop(filters.type, undefined, filters.coOper)}
         </div>
       )}
     </>

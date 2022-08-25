@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Footer from '../components/Footer/Footer';
+/* import Footer from '../components/Footer/Footer'; */
 import NewFooter from '../components/Footer/NewFooter';
 import Sidebar from '../components/Mobile/Sidebar';
 import Navbar from '../components/Navbar/Navbar';
@@ -12,7 +12,7 @@ const MintLayout = (props: any) => {
   useEffect(() => {
     blockScroll();
     allowScroll();
-  }, []);
+  });
   return (
     <div className='JamesJin-Mint overflow-x-hidden'>
       <div

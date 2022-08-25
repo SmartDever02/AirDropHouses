@@ -9,41 +9,49 @@
     {
       "i18name": "menu_name_1",
       "to": "home",
+      "target": false,
       "ROUTING": false
     },
     {
       "i18name": "menu_name_2",
       "to": "roadmap",
+      "target": false,
       "ROUTING": false
     },
     {
       "i18name": "menu_name_3",
       "to": "manual",
-      "ROUTING": false
-    },
-    {
-      "i18name": "menu_name_4",
-      "to": "intro",
+      "target": false,
       "ROUTING": false
     },
     {
       "i18name": "menu_name_5",
       "to": "whitelist",
+      "target": false,
       "ROUTING": false
     },
     {
       "i18name": "menu_name_6",
       "to": "faq",
+      "target": false,
       "ROUTING": false
+    },
+    {
+      "i18name": "menu_name_9",
+      "to": "https://whitepaper.airdrophouses.com",
+      "target": true,
+      "ROUTING": true
     },
     {
       "i18name": "menu_name_7",
       "to": "/mint",
+      "target": false,
       "ROUTING": true
     },
     {
       "i18name": "menu_name_8",
       "to": "/utilities",
+      "target": false,
       "ROUTING": true
     }
   ],
@@ -141,57 +149,27 @@
       "list_4": "phase_4_list_4"
     }
   },
-  "whitelists": [
+  "whitelists_communities": [
     { "name": "mepunk", "link": "https://discord.gg/nGAPH62uEx" },
-    { "name": "crypto_pioneers_guild", "link": "https://discord.gg/qXX7skkR8X" },
-    { "name": "alpha_shark", "link": "" },
-    { "name": "alpacadabraz", "link": "" },
-    { "name": "alphakids", "link": "" },
-    { "name": "apclubnft", "link": "" },
-    { "name": "bitmen", "link": "" },
-    { "name": "cryptopaul", "link": "" },
-    { "name": "dating_ape", "link": "" },
-    { "name": "elysiumshell", "link": "" },
-    { "name": "phanta_bear", "link": "https://discord.gg/eexRE2uJqp" },
-    { "name": "valley22", "link": "" },
-    { "name": "richman_heroes", "link": "" }
+    { "name": "bitmen", "link": "https://discord.gg/bitmen" },
+    { "name": "crypto_pioneers_guild", "link": "https://discord.gg/qXX7skkR8X" }
   ],
-
-  "partners": [
-    {
-      "name": "富足家機構",
-      "img_url": "fzi_logo.png",
-      "link": "https://www.everrich.vip"
-    },
-    {
-      "name": "豐邑機構",
-      "img_url": "fi_logo.png",
-      "link": "http://www.fong-yi.com.tw"
-    },
-    {
-      "name": "遠雄建設",
-      "img_url": "fl_logo.png",
-      "link": "https://www.farglory-land.com.tw"
-    },
-    {
-      "name": "麗寶集團",
-      "img_url": "lpg_logo.png",
-      "link": "https://www.lihpao.com.tw"
-    },
-    {
-      "name": "永豐金控",
-      "img_url": "sph_logo.png",
-      "link": "https://bank.sinopac.com"
-    },
-    {
-      "name": "長虹建設",
-      "img_url": "ch_logo.png",
-      "link": "http://www.chonghong.com.tw"
-    },
-    {
-      "name": "HHEC",
-      "img_url": "hhec_logo.png",
-      "link": "http://www.hhec.com.tw"
-    }
+  "whitelists_list": [
+    { "name": "cryptopaul", "link": "https://discord.gg/cryptopaul" },
+    { "name": "alpha_shark", "link": "https://discord.gg/alphasharkclub" },
+    { "name": "alpacadabraz", "link": "https://discord.gg/Alpacadabraz" },
+    { "name": "alphakids", "link": "https://discord.gg/alphakids" },
+    { "name": "apclubnft", "link": "https://discord.gg/apclub" },
+    { "name": "dating_ape", "link": "https://discord.gg/datingape-taiwanclub" },
+    { "name": "valley22", "link": "https://discord.gg/K4cZeUGh" },
+    { "name": "yolo_cat", "link": "https://discord.gg/yolocatclub" },
+    { "name": "star_wing", "link": "" },
+    { "name": "nftclubm", "link": "" },
+    { "name": "suki_kiku", "link": "https://discord.gg/sukikiku" }
+  ],
+  "whitelists_removed": [
+    { "name": "richman_heroes", "link": "https://discord.gg/softstar" },
+    { "name": "elysiumshell", "link": "" },
+    { "name": "phanta_bear", "link": "https://discord.gg/eexRE2uJqp" }
   ]
 }

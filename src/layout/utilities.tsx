@@ -15,7 +15,7 @@ const UtilityLayout = (props: any) => {
       top: 0,
       behavior: 'smooth',
     });
-  }, []);
+  });
 
   return (
     <div className='James-Utility overflow-x-hidden'>

@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
 import { Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import AppendText from '../../components/Roadmap/AppendText';
 import CheckBox from '../../components/Roadmap/CheckBox';
 import RoadBar from '../../components/Roadmap/RoadBar';
 import RoadmapModal from '../../components/Modals/RoadmapModal';
-import GoldenText from '../../components/Typhography/GoldenText';
+/* import GoldenText from '../../components/Typhography/GoldenText'; */
 import Gradient from '../../components/Typhography/GradientTitle';
 import data from '../../data/structure/landing.json';
 import i18next from 'i18next';
@@ -42,7 +42,7 @@ const RoadmapSection = () => {
         </div>
         <div className='w-full md:w-[20%] lg:w-1/4'>
           <CheckBox checked>{t(data.roadmap.phase_2.list_1)}</CheckBox>
-          <CheckBox>{t(data.roadmap.phase_2.list_2)}</CheckBox>
+          <CheckBox checked>{t(data.roadmap.phase_2.list_2)}</CheckBox>
           <CheckBox>{t(data.roadmap.phase_2.list_3)}</CheckBox>
           <CheckBox>{t(data.roadmap.phase_2.list_4)}</CheckBox>
           <CheckBox>{t(data.roadmap.phase_2.list_5)}</CheckBox>
@@ -61,14 +61,15 @@ const RoadmapSection = () => {
           <CheckBox>{t(data.roadmap.phase_3.list_10)}</CheckBox>
         </div>
         <div className='w-full md:w-[27%] lg:w-1/4'>
-          <CheckBox>
+          {/* <CheckBox>
             <span
               onClick={() => setIsOpen(true)}
               className='cursor-pointer decoration-[#F2974A] underline decoration-1'
             >
               <GoldenText>{t(data.roadmap.phase_4.list_1)}</GoldenText>
             </span>
-          </CheckBox>
+          </CheckBox> */}
+          <CheckBox>{t(data.roadmap.phase_4.list_1)}</CheckBox>
           <CheckBox>{t(data.roadmap.phase_4.list_2)}</CheckBox>
           <CheckBox>{t(data.roadmap.phase_4.list_3)}</CheckBox>
           <CheckBox>{t(data.roadmap.phase_4.list_4)}</CheckBox>

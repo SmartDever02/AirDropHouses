@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { scroller } from 'react-scroll';
-
+/* import { scroller } from 'react-scroll';
 import Footer from '../components/Footer/Footer';
 import LanguageBar from '../components/Footer/LanguageBar';
+import NavMenu from '../components/Navbar/NavMenu'; */
 import NewFooter from '../components/Footer/NewFooter';
 import Sidebar from '../components/Mobile/Sidebar';
 import Navbar from '../components/Navbar/Navbar';
-import NavMenu from '../components/Navbar/NavMenu';
+
 import { useScrollBlock } from '../hooks/useScrollBlock';
 
 const DisclaimerLayout = (props: any) => {
@@ -16,7 +16,7 @@ const DisclaimerLayout = (props: any) => {
   useEffect(() => {
     blockScroll();
     allowScroll();
-  }, []);
+  });
 
   return (
     <div

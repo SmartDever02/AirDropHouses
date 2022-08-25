@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { scroller } from 'react-scroll';
 
-import Footer from '../components/Footer/Footer';
-import LanguageBar from '../components/Footer/LanguageBar';
+/* import Footer from '../components/Footer/Footer';
+import LanguageBar from '../components/Footer/LanguageBar'; */
 import NewFooter from '../components/Footer/NewFooter';
 import Sidebar from '../components/Mobile/Sidebar';
 import Navbar from '../components/Navbar/Navbar';
-import NavMenu from '../components/Navbar/NavMenu';
+/* import NavMenu from '../components/Navbar/NavMenu'; */
 import { useScrollBlock } from '../hooks/useScrollBlock';
 
 const HomeLayout = (props: layoutType) => {
@@ -22,7 +22,7 @@ const HomeLayout = (props: layoutType) => {
         delay: 1000,
         smooth: 'easeInOutQuart',
       });
-  }, []);
+  });
 
   return (
     <div
@@ -64,7 +64,6 @@ const HomeLayout = (props: layoutType) => {
           !val && allowScroll();
         }}
       />
-      {/* <Footer /> */}
       <NewFooter></NewFooter>
     </div>
   );

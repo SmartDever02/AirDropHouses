@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import walletIcon from '../../resources/images/landing/walletIcon.svg';
 import walletIconOver from '../../resources/images/landing/walletIconOver.svg';
-import GoldenText from '../Typhography/GoldenText';
+/* import GoldenText from '../Typhography/GoldenText'; */
 
 const MintButton = (props: mintButtonType) => {
   return (
     <Link to='/mint'>
-      <div className='group mt-[17px] bg-gradient-to-r from-[#F2974A] to-[#F4E077] pl-[1.3px] px-[1px] py-[1px] rounded-full'>
+      <div className='group mt-[25px] bg-gradient-to-r from-[#F2974A] to-[#F4E077] pl-[1.3px] px-[1px] py-[1px] rounded-full'>
         <button
           className={`w-full py-[6px] sm:py-[9px] lg:py-[12px] rounded-full font-bold ${
             props.introduction ? 'bg-[#14141F]' : 'bg-[#14141F] lg:bg-black'
